@@ -7,7 +7,10 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
+html,
 body{
+    width:100%;
+    min-height:100vh;
     background:#f5f7fa;
 }
 
@@ -15,16 +18,20 @@ body{
 
 .container{
     display:flex;
-    height:100vh;
 }
 
 /* SIDEBAR */
 
 .sidebar{
     width:250px;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
     background:#1f2937;
     color:white;
     padding:20px;
+    overflow-y:auto;
 }
 
 .logo{
@@ -40,6 +47,7 @@ body{
     padding:15px 10px;
     cursor:pointer;
     border-radius:8px;
+    transition:.3s;
 }
 
 .sidebar li:hover{
@@ -49,9 +57,12 @@ body{
 /* CONTENU */
 
 .main-content{
+    margin-left:250px;
     flex:1;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
+    background:#f5f7fa;
 }
 
 /* HEADER */
@@ -69,5 +80,6 @@ body{
 /* PAGE */
 
 .content{
+    flex:1;
     padding:30px;
 }
