@@ -42,8 +42,8 @@ body {
 
 .logo {
     text-align: center;
-    margin-bottom: 40px;
-    padding: 20px 0;
+    margin-bottom: 25px;
+    padding: 15px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -82,20 +82,20 @@ body {
 }
 
 .sidebar nav li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .nav-link {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 15px;
+    padding: 12px 15px;
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     border-radius: 8px;
     transition: all 0.3s ease;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 17px;
 }
 
 .nav-link i {
