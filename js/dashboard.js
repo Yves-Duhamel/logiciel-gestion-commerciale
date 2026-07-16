@@ -127,20 +127,32 @@ console.log('Dashboard initialisé avec succès');
 const categories = document.querySelectorAll(".category-title");
 
 console.log("Catégories trouvées :", categories.length);
+
 categories.forEach(function(category) {
 
     category.addEventListener("click", function(e) {
 
         e.preventDefault();
-        
-       const submenu = this.parentElement.querySelector(".submenu");
 
-       if (submenu.style.display === "block") {
-           submenu.style.display = "none";
-       } else {
-           submenu.style.display = "block";
-       }
+        const submenu = this.parentElement.querySelector(".submenu");
+        const arrow = this.querySelector(".arrow");
 
-  }); 
+        if (submenu.style.display === "block") {
+            submenu.style.display = "none";
+
+            if (arrow) {
+                arrow.textContent = "▼";
+            }
+
+        } else {
+            submenu.style.display = "block";
+
+            if (arrow) {
+                arrow.textContent = "▲";
+            }
+
+        }
+
+    });
 
 });
