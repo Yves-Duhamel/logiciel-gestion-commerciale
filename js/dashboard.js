@@ -5,13 +5,17 @@ const sidebar = document.getElementById('sidebar');
 const sidebarToggle = document.getElementById('sidebar-toggle');
 const sidebarClose = document.getElementById('sidebar-close');
 
-sidebarToggle.addEventListener('click', () => {
-    sidebar.classList.add('active');
-});
+if (sidebarToggle && sidebar) {
+    sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.add('active');
+    });
+}
 
-sidebarClose.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-});
+if (sidebarClose && sidebar) {
+    sidebarClose.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+    });
+}
 
 // Fermer le sidebar en cliquant en dehors
 document.addEventListener('click', (e) => {
