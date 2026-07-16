@@ -118,17 +118,17 @@ function formatCurrency(value) {
 
 // Log pour debugging (à retirer en production)
 console.log('Dashboard initialisé avec succès');
-// Menu accordéon sidebar
+// ===== MENU ACCORDEON SIDEBAR =====
 
 const categories = document.querySelectorAll(".category-title");
 
-categories.forEach(category => {
+categories.forEach(function(category) {
 
     category.addEventListener("click", function(e) {
 
         e.preventDefault();
 
-        const submenu = this.nextElementSibling;
+        const submenu = this.parentElement.querySelector(".submenu");
 
         if (submenu.style.display === "block") {
             submenu.style.display = "none";
