@@ -122,6 +122,7 @@ console.log('Dashboard initialisé avec succès');
 
 const categories = document.querySelectorAll(".category-title");
 
+console.log("Catégories trouvées :", categories.length);
 categories.forEach(function(category) {
 
     category.addEventListener("click", function(e) {
