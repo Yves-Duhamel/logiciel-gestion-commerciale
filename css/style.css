@@ -644,3 +644,49 @@ body {
     }
 
 }
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: row;
+        height: 70px;
+        padding: 0 15px;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .header-left h2 {
+        font-size: 16px;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    /* Recherche cachée sur mobile */
+    .search-container {
+        position: absolute;
+        top: 70px;
+        left: 15px;
+        right: 15px;
+        display: none;
+    }
+
+
+    .search-container.active {
+        display: flex;
+    }
+
+
+    .search-input {
+        width: 100%;
+    }
+
+}
