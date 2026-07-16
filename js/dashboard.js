@@ -132,9 +132,15 @@ categories.forEach(function(category) {
     category.addEventListener("click", function(e) {
 
         e.preventDefault();
+        
+       const submenu = this.parentElement.querySelector(".submenu");
 
        if (submenu.style.display === "block") {
-    submenu.style.display = "none";
-} else {
-    submenu.style.display = "block";
-}
+           submenu.style.display = "none";
+       } else {
+           submenu.style.display = "block";
+       }
+
+  }); 
+
+});
