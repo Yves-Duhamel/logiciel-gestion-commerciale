@@ -117,3 +117,24 @@ function formatCurrency(value) {
 
 // Log pour debugging (à retirer en production)
 console.log('Dashboard initialisé avec succès');
+// Menu accordéon sidebar
+
+const categories = document.querySelectorAll(".category-title");
+
+categories.forEach(category => {
+
+    category.addEventListener("click", function(e) {
+
+        e.preventDefault();
+
+        const submenu = this.nextElementSibling;
+
+        if (submenu.style.display === "block") {
+            submenu.style.display = "none";
+        } else {
+            submenu.style.display = "block";
+        }
+
+    });
+
+});
