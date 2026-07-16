@@ -131,13 +131,15 @@ body {
 /* ===== HEADER ===== */
 
 .header {
-    height: 70px;
+    min-height: 70px;
     background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    gap: 15px;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -600,9 +602,28 @@ body {
 .submenu {
     display: none;
     list-style: none;
-    padding-left: 15px;
+    padding-left: 18px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.submenu .nav-link {
+    font-size: 10px;
+    padding: 8px 12px;
 }
 
 .category-title {
     cursor: pointer;
+}
+
+.card {
+    min-width: 0;
+}
+
+.card-content {
+    overflow: hidden;
+}
+
+.card-value {
+    word-break: break-word;
 }
