@@ -134,13 +134,14 @@ categories.forEach(function(category) {
         e.preventDefault();
 
         const submenu = this.parentElement.querySelector(".submenu");
+    const arrow = this.querySelector(".arrow");
 
-        if (submenu.style.display === "block") {
-            submenu.style.display = "none";
-        } else {
-            submenu.style.display = "block";
-        }
-
-    });
+    if (submenu.style.display === "block") {
+        submenu.style.display = "none";
+        arrow.textContent = "▼";
+    } else {
+        submenu.style.display = "block";
+        arrow.textContent = "▲";
+    }
 
 });
