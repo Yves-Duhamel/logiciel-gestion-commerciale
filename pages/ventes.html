@@ -178,6 +178,134 @@
 
 </div>       
 
+                <!-- Recherche et filtres -->
+    <div class="sales-filters">
+
+        <div class="sales-search">
+            <input
+                type="text"
+                id="sales-search-input"
+                placeholder="Rechercher une vente, un client..."
+            >
+        </div>
+
+        <select id="payment-filter">
+            <option value="">Tous les paiements</option>
+            <option value="paye">Payé</option>
+            <option value="partiel">Paiement partiel</option>
+            <option value="attente">En attente</option>
+        </select>
+
+        <select id="delivery-filter">
+            <option value="">Toutes les livraisons</option>
+            <option value="preparation">En préparation</option>
+            <option value="livraison">En livraison</option>
+            <option value="livre">Livrée</option>
+            <option value="retrait">Retrait en boutique</option>
+        </select>
+
+        <select id="driver-filter">
+            <option value="">Tous les livreurs</option>
+            <option value="aucun">Aucun livreur</option>
+        </select>
+
+    </div>
+
+    <!-- Tableau des ventes -->
+    <div class="sales-table-container">
+
+        <table class="sales-table">
+
+            <thead>
+                <tr>
+                    <th>N° Vente</th>
+                    <th>Date</th>
+                    <th>Client</th>
+                    <th>Montant</th>
+                    <th>Livreur assigné</th>
+                    <th>Paiement</th>
+                    <th>Livraison</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="sales-table-body">
+
+                <tr>
+                    <td>#V0001</td>
+                    <td>18/07/2026</td>
+                    <td>Client comptoir</td>
+                    <td>35 000 FCFA</td>
+                    <td>
+                        <span class="driver-name">Ali Koné</span>
+                    </td>
+                    <td>
+                        <span class="status-badge status-paid">
+                            Payé
+                        </span>
+                    </td>
+                    <td>
+                        <span class="status-badge status-delivery">
+                            En livraison
+                        </span>
+                    </td>
+                    <td>
+                        <div class="table-actions">
+                            <button class="action-btn view-btn" title="Voir">
+                                👁
+                            </button>
+
+                            <button class="action-btn edit-btn" title="Modifier">
+                                ✏️
+                            </button>
+
+                            <button class="action-btn delete-btn" title="Supprimer">
+                                🗑️
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>#V0002</td>
+                    <td>18/07/2026</td>
+                    <td>Awa Traoré</td>
+                    <td>82 500 FCFA</td>
+                    <td>
+                        <span class="driver-name">
+                            Aucun — retrait boutique
+                        </span>
+                    </td>
+                    <td>
+                        <span class="status-badge status-pending">
+                            En attente
+                        </span>
+                    </td>
+                    <td>
+                        <span class="status-badge status-pickup">
+                            Retrait en boutique
+                        </span>
+                    </td>
+                    <td>
+                        <div class="table-actions">
+                            <button class="action-btn view-btn" title="Voir">
+                                👁
+                            </button>
+
+                            <button class="action-btn edit-btn" title="Modifier">
+                                ✏️
+                            </button>
+
+                            <button class="action-btn delete-btn" title="Supprimer">
+                                🗑️
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
         </section>
 
         </main>
