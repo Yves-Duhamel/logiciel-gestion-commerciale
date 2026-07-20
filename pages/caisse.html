@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Caisse</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ===== Sidebar ===== -->
+    <aside id="sidebar" class="sidebar">
+
+        <button id="sidebar-close" class="sidebar-close">
+            ✖
+        </button>
+
+        <a href="dashboard.html" class="logo">
+            <img src="../logo-vizibl.png" alt="Logo VISIBL">
+        </a>
+
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="dashboard.html" class="nav-link">
+                        📊 Tableau de bord
+                    </a>
+                </li>
+
+                <!-- ===== Menu Commercial ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>🛒 Commercial</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="ventes.html" class="nav-link">
+                                Ventes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="commandes.html" class="nav-link">
+                                Commandes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="clients.html" class="nav-link">
+                                Clients
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livraisons.html" class="nav-link">
+                                Livraisons
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livreurs.html" class="nav-link">
+                                Livreurs
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- ===== Menu Stock et approvisionnement ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>📦 Stock & Approvisionnement</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="produits.html" class="nav-link">
+                                Produits
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="approvisionnements.html" class="nav-link">
+                                Approvisionnements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fournisseurs.html" class="nav-link">
+                                Fournisseurs
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="transitaires.html" class="nav-link">
+                                Transitaires
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- ===== Menu Finance ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>💰 Finance</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="caisse.html" class="nav-link">
+                                Caisse
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="paiements.html" class="nav-link">
+                                Paiements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="factures.html" class="nav-link">
+                                Factures
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="comptabilité.html" class="nav-link">
+                                Comptabilité
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="rapports.html" class="nav-link">
+                        📈 Rapports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="paramètres.html" class="nav-link">
+                        ⚙️ Paramètres
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- ===== Contenu principal ===== -->
+    <main class="main-content">
+
+        <!-- ===== Header ===== -->
+        <header class="header">
+
+            <div class="header-left">
+
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    ☰
+                </button>
+
+                <a href="dashboard.html" class="logo">
+                    <img src="../logo-vizibl.png" alt="Logo VISIBL">
+                </a>
+
+                <h2>Caisse</h2>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <!-- Icône de recherche visible sur mobile -->
+                    <button class="icon-btn" id="mobile-search-btn">
+                        🔍
+                    </button>
+
+                    <!-- Barre de recherche du header -->
+                    <div class="search-container">
+
+                        <input
+                            type="text"
+                            class="search-input"
+                            placeholder="Rechercher une opération..."
+                        >
+
+                        <button class="search-btn">
+                            🔍
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="header-icons">
+
+                    <button class="icon-btn notifications">
+                        🔔
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <div class="profile-menu">
+
+                        <button class="icon-btn">
+                            👤
+                        </button>
+
+                        <div class="dropdown-menu">
+
+                            <a href="#">
+                                Mon profil
+                            </a>
+
+                            <a href="#">
+                                Paramètres
+                            </a>
+
+                            <hr>
+
+                            <a href="#" class="logout">
+                                Déconnexion
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ===== Contenu de la page ===== -->
+        <section class="content">
+
+            <!-- ===== Présentation ===== -->
+            <div class="welcome-section">
+
+                <h2>Caisse</h2>
+
+                <p>
+                    Consultez et gérez les entrées et sorties d’argent
+                    enregistrées dans la caisse de l’entreprise.
+                </p>
+
+            </div>
+
+            <!-- ===== Bouton nouvelle opération ===== -->
+            <div class="sales-toolbar">
+
+                <button class="btn-primary" id="new-cash-operation-btn">
+                    ➕ Nouvelle opération
+                </button>
+
+            </div>
+
+            <!-- ===== Indicateurs de caisse ===== -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <span class="stat-label">
+                            Solde actuel
+                        </span>
+
+                        <h3 class="stat-value">
+                            1 850 000 FCFA
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <span class="stat-label">
+                            Entrées du mois
+                        </span>
+
+                        <h3 class="stat-value">
+                            3 275 000 FCFA
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <span class="stat-label">
+                            Sorties du mois
+                        </span>
+
+                        <h3 class="stat-value">
+                            1 425 000 FCFA
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <span class="stat-label">
+                            Opérations du mois
+                        </span>
+
+                        <h3 class="stat-value">
+                            38
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ===== Recherche et filtres ===== -->
+            <div class="sales-filters">
+
+                <div class="sales-search">
+
+                    <input
+                        type="text"
+                        id="cash-search-input"
+                        placeholder="Rechercher par référence, libellé ou utilisateur..."
+                    >
+
+                </div>
+
+                <!-- Filtre type d'opération -->
+                <select id="cash-operation-type-filter">
+
+                    <option value="">
+                        Toutes les opérations
+                    </option>
+
+                    <option value="entree">
+                        Entrées
+                    </option>
+
+                    <option value="sortie">
+                        Sorties
+                    </option>
+
+                </select>
+
+                <!-- Filtre catégorie -->
+                <select id="cash-category-filter">
+
+                    <option value="">
+                        Toutes les catégories
+                    </option>
+
+                    <option value="vente">
+                        Vente
+                    </option>
+
+                    <option value="paiement-client">
+                        Paiement client
+                    </option>
+
+                    <option value="approvisionnement">
+                        Approvisionnement
+                    </option>
+
+                    <option value="paiement-fournisseur">
+                        Paiement fournisseur
+                    </option>
+
+                    <option value="transport">
+                        Transport
+                    </option>
+
+                    <option value="loyer">
+                        Loyer
+                    </option>
+
+                    <option value="salaire">
+                        Salaire
+                    </option>
+
+                    <option value="depense">
+                        Autre dépense
+                    </option>
+
+                    <option value="autre-recette">
+                        Autre recette
+                    </option>
+
+                </select>
+
+                <!-- Filtre moyen de paiement -->
+                <select id="cash-payment-method-filter">
+
+                    <option value="">
+                        Tous les moyens de paiement
+                    </option>
+
+                    <option value="especes">
+                        Espèces
+                    </option>
+
+                    <option value="mobile-money">
+                        Mobile Money
+                    </option>
+
+                    <option value="virement">
+                        Virement bancaire
+                    </option>
+
+                    <option value="cheque">
+                        Chèque
+                    </option>
+
+                    <option value="carte">
+                        Carte bancaire
+                    </option>
+
+                </select>
+
+                <!-- Filtre période -->
+                <select id="cash-period-filter">
+
+                    <option value="">
+                        Toutes les périodes
+                    </option>
+
+                    <option value="aujourdhui">
+                        Aujourd’hui
+                    </option>
+
+                    <option value="semaine">
+                        Cette semaine
+                    </option>
+
+                    <option value="mois">
+                        Ce mois
+                    </option>
+
+                    <option value="annee">
+                        Cette année
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- ===== Tableau des opérations de caisse ===== -->
+            <div class="sales-table-container">
+
+                <table class="sales-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Référence</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Catégorie</th>
+                            <th>Libellé</th>
+                            <th>Moyen de paiement</th>
+                            <th>Entrée</th>
+                            <th>Sortie</th>
+                            <th>Solde après opération</th>
+                            <th>Utilisateur</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="cash-table-body">
+
+                        <!-- ===== Exemple opération 1 ===== -->
+                        <tr>
+
+                            <td>#CAI0001</td>
+
+                            <td>20/07/2026</td>
+
+                            <td>
+                                <span class="status-badge status-paid">
+                                    Entrée
+                                </span>
+                            </td>
+
+                            <td>Vente</td>
+
+                            <td>
+                                Paiement de la vente #VTE0008
+                            </td>
+
+                            <td>Mobile Money</td>
+
+                            <td>350 000 FCFA</td>
+
+                            <td>—</td>
+
+                            <td>1 850 000 FCFA</td>
+
+                            <td>Administrateur</td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir l'opération"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier l'opération"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer l'opération"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- ===== Exemple opération 2 ===== -->
+                        <tr>
+
+                            <td>#CAI0002</td>
+
+                            <td>19/07/2026</td>
+
+                            <td>
+                                <span class="status-badge status-cancelled">
+                                    Sortie
+                                </span>
+                            </td>
+
+                            <td>Paiement fournisseur</td>
+
+                            <td>
+                                Règlement fournisseur #FRN0002
+                            </td>
+
+                            <td>Virement bancaire</td>
+
+                            <td>—</td>
+
+                            <td>500 000 FCFA</td>
+
+                            <td>1 500 000 FCFA</td>
+
+                            <td>Administrateur</td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir l'opération"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier l'opération"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer l'opération"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- ===== Exemple opération 3 ===== -->
+                        <tr>
+
+                            <td>#CAI0003</td>
+
+                            <td>18/07/2026</td>
+
+                            <td>
+                                <span class="status-badge status-cancelled">
+                                    Sortie
+                                </span>
+                            </td>
+
+                            <td>Transport</td>
+
+                            <td>
+                                Frais de transport de marchandises
+                            </td>
+
+                            <td>Espèces</td>
+
+                            <td>—</td>
+
+                            <td>75 000 FCFA</td>
+
+                            <td>2 000 000 FCFA</td>
+
+                            <td>Caissier</td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir l'opération"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier l'opération"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer l'opération"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
