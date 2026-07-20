@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Paiements</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ===== Sidebar ===== -->
+    <aside id="sidebar" class="sidebar">
+
+        <button id="sidebar-close" class="sidebar-close">
+            ✖
+        </button>
+
+        <a href="dashboard.html" class="logo">
+            <img src="../logo-vizibl.png" alt="Logo VISIBL">
+        </a>
+
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="dashboard.html" class="nav-link">
+                        📊 Tableau de bord
+                    </a>
+                </li>
+
+                <!-- ===== Menu Commercial ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>🛒 Commercial</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="ventes.html" class="nav-link">
+                                Ventes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="commandes.html" class="nav-link">
+                                Commandes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="clients.html" class="nav-link">
+                                Clients
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livraisons.html" class="nav-link">
+                                Livraisons
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livreurs.html" class="nav-link">
+                                Livreurs
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- ===== Menu Stock et approvisionnement ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>📦 Stock & Approvisionnement</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="produits.html" class="nav-link">
+                                Produits
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="approvisionnements.html" class="nav-link">
+                                Approvisionnements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fournisseurs.html" class="nav-link">
+                                Fournisseurs
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="transitaires.html" class="nav-link">
+                                Transitaires
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- ===== Menu Finance ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>💰 Finance</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="caisse.html" class="nav-link">
+                                Caisse
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="paiements.html" class="nav-link">
+                                Paiements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="factures.html" class="nav-link">
+                                Factures
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="comptabilité.html" class="nav-link">
+                                Comptabilité
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="rapports.html" class="nav-link">
+                        📈 Rapports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="paramètres.html" class="nav-link">
+                        ⚙️ Paramètres
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- ===== Contenu principal ===== -->
+    <main class="main-content">
+
+        <!-- ===== Header ===== -->
+        <header class="header">
+
+            <div class="header-left">
+
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    ☰
+                </button>
+
+                <a href="dashboard.html" class="logo">
+                    <img src="../logo-vizibl.png" alt="Logo VISIBL">
+                </a>
+
+                <h2>Paiements</h2>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <!-- Icône de recherche visible sur mobile -->
+                    <button class="icon-btn" id="mobile-search-btn">
+                        🔍
+                    </button>
+
+                    <!-- Barre de recherche du header -->
+                    <div class="search-container">
+
+                        <input
+                            type="text"
+                            class="search-input"
+                            placeholder="Rechercher un paiement..."
+                        >
+
+                        <button class="search-btn">
+                            🔍
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="header-icons">
+
+                    <button class="icon-btn notifications">
+                        🔔
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <div class="profile-menu">
+
+                        <button class="icon-btn">
+                            👤
+                        </button>
+
+                        <div class="dropdown-menu">
+
+                            <a href="#">
+                                Mon profil
+                            </a>
+
+                            <a href="#">
+                                Paramètres
+                            </a>
+
+                            <hr>
+
+                            <a href="#" class="logout">
+                                Déconnexion
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ===== Contenu de la page ===== -->
+        <section class="content">
+
+            <!-- ===== Présentation ===== -->
+            <div class="welcome-section">
+
+                <h2>Paiements</h2>
+
+                <p>
+                    Enregistrez, consultez et suivez les paiements reçus
+                    ainsi que les montants restant à payer par vos clients.
+                </p>
+
+            </div>
+
+            <!-- ===== Bouton nouveau paiement ===== -->
+            <div class="sales-toolbar">
+
+                <button class="btn-primary" id="new-payment-btn">
+                    ➕ Nouveau paiement
+                </button>
+
+            </div>
+
+            <!-- ===== Recherche et filtres ===== -->
+            <div class="sales-filters">
+
+                <div class="sales-search">
+
+                    <input
+                        type="text"
+                        id="payments-search-input"
+                        placeholder="Rechercher par référence, client ou facture..."
+                    >
+
+                </div>
+
+                <!-- Filtre statut -->
+                <select id="payment-status-filter">
+
+                    <option value="">
+                        Tous les statuts
+                    </option>
+
+                    <option value="paye">
+                        Payé
+                    </option>
+
+                    <option value="partiel">
+                        Partiel
+                    </option>
+
+                    <option value="attente">
+                        En attente
+                    </option>
+
+                    <option value="retard">
+                        En retard
+                    </option>
+
+                    <option value="annule">
+                        Annulé
+                    </option>
+
+                </select>
+
+                <!-- Filtre mode de paiement -->
+                <select id="payment-method-filter">
+
+                    <option value="">
+                        Tous les modes de paiement
+                    </option>
+
+                    <option value="especes">
+                        Espèces
+                    </option>
+
+                    <option value="mobile-money">
+                        Mobile Money
+                    </option>
+
+                    <option value="virement">
+                        Virement bancaire
+                    </option>
+
+                    <option value="cheque">
+                        Chèque
+                    </option>
+
+                    <option value="carte">
+                        Carte bancaire
+                    </option>
+
+                </select>
+
+                <!-- Filtre période -->
+                <select id="payment-period-filter">
+
+                    <option value="">
+                        Toutes les périodes
+                    </option>
+
+                    <option value="aujourdhui">
+                        Aujourd’hui
+                    </option>
+
+                    <option value="semaine">
+                        Cette semaine
+                    </option>
+
+                    <option value="mois">
+                        Ce mois
+                    </option>
+
+                    <option value="annee">
+                        Cette année
+                    </option>
+
+                </select>
+
+                <!-- Filtre client -->
+                <select id="payment-client-filter">
+
+                    <option value="">
+                        Tous les clients
+                    </option>
+
+                    <option value="cli0001">
+                        Société Kouadio SARL
+                    </option>
+
+                    <option value="cli0002">
+                        Boutique Grâce Divine
+                    </option>
+
+                    <option value="cli0003">
+                        Yao Bernard
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- ===== Tableau des paiements ===== -->
+            <div class="sales-table-container">
+
+                <table class="sales-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>ID Paiement</th>
+                            <th>Date</th>
+                            <th>Client</th>
+                            <th>Facture</th>
+                            <th>Montant dû</th>
+                            <th>Montant payé</th>
+                            <th>Reste à payer</th>
+                            <th>Mode de paiement</th>
+                            <th>Référence transaction</th>
+                            <th>Statut</th>
+                            <th>Utilisateur</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="payments-table-body">
+
+                        <!-- ===== Exemple paiement 1 ===== -->
+                        <tr>
+
+                            <td>#PAY0001</td>
+                            <td>20/07/2026</td>
+                            <td>Société Kouadio SARL</td>
+                            <td>#FAC0012</td>
+                            <td>450 000 FCFA</td>
+                            <td>450 000 FCFA</td>
+                            <td>0 FCFA</td>
+                            <td>Virement bancaire</td>
+                            <td>VIR-2026-00781</td>
+
+                            <td>
+                                <span class="status-badge status-paid">
+                                    Payé
+                                </span>
+                            </td>
+
+                            <td>Administrateur</td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le paiement"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le paiement"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le paiement"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- ===== Exemple paiement 2 ===== -->
+                        <tr>
+
+                            <td>#PAY0002</td>
+                            <td>19/07/2026</td>
+                            <td>Boutique Grâce Divine</td>
+                            <td>#FAC0013</td>
+                            <td>300 000 FCFA</td>
+                            <td>150 000 FCFA</td>
+                            <td>150 000 FCFA</td>
+                            <td>Mobile Money</td>
+                            <td>MM-45876219</td>
+
+                            <td>
+                                <span class="status-badge status-pending">
+                                    Partiel
+                                </span>
+                            </td>
+
+                            <td>Caissier</td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le paiement"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le paiement"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le paiement"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- ===== Exemple paiement 3 ===== -->
+                        <tr>
+
+                            <td>#PAY0003</td>
+                            <td>15/07/2026</td>
+                            <td>Yao Bernard</td>
+                            <td>#FAC0009</td>
+                            <td>240 000 FCFA</td>
+                            <td>0 FCFA</td>
+                            <td>240 000 FCFA</td>
+                            <td>Espèces</td>
+                            <td>—</td>
+
+                            <td>
+                                <span class="status-badge status-cancelled">
+                                    En retard
+                                </span>
+                            </td>
+
+                            <td>Administrateur</td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le paiement"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le paiement"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le paiement"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
