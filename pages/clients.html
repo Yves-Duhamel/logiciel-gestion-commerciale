@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clients</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ===== Sidebar ===== -->
+    <aside id="sidebar" class="sidebar">
+
+        <button id="sidebar-close" class="sidebar-close">
+            ✖
+        </button>
+
+        <a href="dashboard.html" class="logo">
+            <img src="../logo-vizibl.png" alt="Logo">
+        </a>
+
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="dashboard.html" class="nav-link">
+                        📊 Tableau de bord
+                    </a>
+                </li>
+
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>🛒 Commercial</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="ventes.html" class="nav-link">
+                                Ventes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="commandes.html" class="nav-link">
+                                Commandes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="clients.html" class="nav-link">
+                                Clients
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Livraisons
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Livreurs
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>📦 Stock & Approvisionnement</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Produits
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Approvisionnements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Fournisseurs
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Transitaires
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>💰 Finance</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Caisse
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Paiements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Factures
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Comptabilité
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="#" class="nav-link">
+                        📈 Rapports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-link">
+                        ⚙️ Paramètres
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- ===== Contenu principal ===== -->
+    <main class="main-content">
+
+        <!-- ===== Header ===== -->
+        <header class="header">
+
+            <div class="header-left">
+
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    ☰
+                </button>
+
+                <a href="dashboard.html" class="logo">
+                    <img src="../logo-vizibl.png" alt="Logo">
+                </a>
+
+                <h2>Clients</h2>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <!-- Icône visible sur mobile -->
+                    <button class="icon-btn" id="mobile-search-btn">
+                        🔍
+                    </button>
+
+                    <!-- Barre de recherche -->
+                    <div class="search-container">
+
+                        <input
+                            type="text"
+                            class="search-input"
+                            placeholder="Rechercher un client..."
+                        >
+
+                        <button class="search-btn">
+                            🔍
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="header-icons">
+
+                    <button class="icon-btn notifications">
+                        🔔
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <div class="profile-menu">
+
+                        <button class="icon-btn">
+                            👤
+                        </button>
+
+                        <div class="dropdown-menu">
+
+                            <a href="#">
+                                Mon profil
+                            </a>
+
+                            <a href="#">
+                                Paramètres
+                            </a>
+
+                            <hr>
+
+                            <a href="#" class="logout">
+                                Déconnexion
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ===== Contenu de la page ===== -->
+        <section class="content">
+
+            <div class="welcome-section">
+
+                <h2>Clients</h2>
+
+                <p>
+                    Enregistrez, consultez et gérez tous les clients
+                    de votre boutique.
+                </p>
+
+            </div>
+
+            <!-- ===== Bouton nouveau client ===== -->
+            <div class="sales-toolbar">
+
+                <button class="btn-primary" id="new-client-btn">
+                    ➕ Nouveau client
+                </button>
+
+            </div>
+
+            <!-- ===== Recherche et filtres ===== -->
+            <div class="sales-filters">
+
+                <div class="sales-search">
+
+                    <input
+                        type="text"
+                        id="clients-search-input"
+                        placeholder="Rechercher par nom, téléphone ou email..."
+                    >
+
+                </div>
+
+                <!-- Filtre type de client -->
+                <select id="client-type-filter">
+
+                    <option value="">
+                        Tous les types de clients
+                    </option>
+
+                    <option value="particulier">
+                        Particulier
+                    </option>
+
+                    <option value="entreprise">
+                        Entreprise
+                    </option>
+
+                    <option value="revendeur">
+                        Revendeur
+                    </option>
+
+                    <option value="client-comptoir">
+                        Client comptoir
+                    </option>
+
+                </select>
+
+                <!-- Filtre statut -->
+                <select id="client-status-filter">
+
+                    <option value="">
+                        Tous les statuts
+                    </option>
+
+                    <option value="actif">
+                        Actif
+                    </option>
+
+                    <option value="inactif">
+                        Inactif
+                    </option>
+
+                    <option value="bloque">
+                        Bloqué
+                    </option>
+
+                </select>
+
+                <!-- Filtre commune -->
+                <select id="client-commune-filter">
+
+                    <option value="">
+                        Toutes les communes
+                    </option>
+
+                    <option value="abobo">
+                        Abobo
+                    </option>
+
+                    <option value="adjame">
+                        Adjamé
+                    </option>
+
+                    <option value="attecoube">
+                        Attécoubé
+                    </option>
+
+                    <option value="cocody">
+                        Cocody
+                    </option>
+
+                    <option value="koumassi">
+                        Koumassi
+                    </option>
+
+                    <option value="marcory">
+                        Marcory
+                    </option>
+
+                    <option value="plateau">
+                        Plateau
+                    </option>
+
+                    <option value="port-bouet">
+                        Port-Bouët
+                    </option>
+
+                    <option value="treichville">
+                        Treichville
+                    </option>
+
+                    <option value="yopougon">
+                        Yopougon
+                    </option>
+
+                    <option value="autre">
+                        Autre
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- ===== Tableau des clients ===== -->
+            <div class="sales-table-container">
+
+                <table class="sales-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>ID Client</th>
+                            <th>Nom complet</th>
+                            <th>Téléphone</th>
+                            <th>Commune</th>
+                            <th>Type de client</th>
+                            <th>Commandes</th>
+                            <th>Total des achats</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="clients-table-body">
+
+                        <!-- Exemple de client 1 -->
+                        <tr>
+
+                            <td>#CL0001</td>
+
+                            <td>Awa Traoré</td>
+
+                            <td>07 00 00 00 01</td>
+
+                            <td>Cocody</td>
+
+                            <td>
+                                Particulier
+                            </td>
+
+                            <td>
+                                5
+                            </td>
+
+                            <td>
+                                275 000 FCFA
+                            </td>
+
+                            <td>
+                                <span class="status-badge status-paid">
+                                    Actif
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le client"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le client"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le client"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- Exemple de client 2 -->
+                        <tr>
+
+                            <td>#CL0002</td>
+
+                            <td>Entreprise KDS</td>
+
+                            <td>05 00 00 00 02</td>
+
+                            <td>Marcory</td>
+
+                            <td>
+                                Entreprise
+                            </td>
+
+                            <td>
+                                12
+                            </td>
+
+                            <td>
+                                1 450 000 FCFA
+                            </td>
+
+                            <td>
+                                <span class="status-badge status-paid">
+                                    Actif
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le client"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le client"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le client"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
