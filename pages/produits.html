@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produits</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ===== Sidebar ===== -->
+    <aside id="sidebar" class="sidebar">
+
+        <button id="sidebar-close" class="sidebar-close">
+            ✖
+        </button>
+
+        <a href="dashboard.html" class="logo">
+            <img src="../logo-vizibl.png" alt="Logo VISIBL">
+        </a>
+
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="dashboard.html" class="nav-link">
+                        📊 Tableau de bord
+                    </a>
+                </li>
+
+                <!-- ===== Menu Commercial ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>🛒 Commercial</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="ventes.html" class="nav-link">
+                                Ventes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="commandes.html" class="nav-link">
+                                Commandes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="clients.html" class="nav-link">
+                                Clients
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livraisons.html" class="nav-link">
+                                Livraisons
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livreurs.html" class="nav-link">
+                                Livreurs
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- ===== Menu Stock et approvisionnement ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>📦 Stock & Approvisionnement</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="produits.html" class="nav-link">
+                                Produits
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="approvisionnements.html" class="nav-link">
+                                Approvisionnements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fournisseurs.html" class="nav-link">
+                                Fournisseurs
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="transitaires.html" class="nav-link">
+                                Transitaires
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- ===== Menu Finance ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>💰 Finance</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="caisse.html" class="nav-link">
+                                Caisse
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="paiements.html" class="nav-link">
+                                Paiements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="factures.html" class="nav-link">
+                                Factures
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="comptabilite.html" class="nav-link">
+                                Comptabilité
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="rapports.html" class="nav-link">
+                        📈 Rapports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="parametres.html" class="nav-link">
+                        ⚙️ Paramètres
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- ===== Contenu principal ===== -->
+    <main class="main-content">
+
+        <!-- ===== Header ===== -->
+        <header class="header">
+
+            <div class="header-left">
+
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    ☰
+                </button>
+
+                <a href="dashboard.html" class="logo">
+                    <img src="../logo-vizibl.png" alt="Logo VISIBL">
+                </a>
+
+                <h2>Produits</h2>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <!-- Icône de recherche visible sur mobile -->
+                    <button class="icon-btn" id="mobile-search-btn">
+                        🔍
+                    </button>
+
+                    <!-- Barre de recherche du header -->
+                    <div class="search-container">
+
+                        <input
+                            type="text"
+                            class="search-input"
+                            placeholder="Rechercher un produit..."
+                        >
+
+                        <button class="search-btn">
+                            🔍
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="header-icons">
+
+                    <button class="icon-btn notifications">
+                        🔔
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <div class="profile-menu">
+
+                        <button class="icon-btn">
+                            👤
+                        </button>
+
+                        <div class="dropdown-menu">
+
+                            <a href="#">
+                                Mon profil
+                            </a>
+
+                            <a href="#">
+                                Paramètres
+                            </a>
+
+                            <hr>
+
+                            <a href="#" class="logout">
+                                Déconnexion
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ===== Contenu de la page ===== -->
+        <section class="content">
+
+            <!-- ===== Présentation ===== -->
+            <div class="welcome-section">
+
+                <h2>Produits</h2>
+
+                <p>
+                    Enregistrez, consultez et gérez les produits,
+                    leurs prix et leur niveau de stock.
+                </p>
+
+            </div>
+
+            <!-- ===== Bouton nouveau produit ===== -->
+            <div class="sales-toolbar">
+
+                <button class="btn-primary" id="new-product-btn">
+                    ➕ Nouveau produit
+                </button>
+
+            </div>
+
+            <!-- ===== Recherche et filtres ===== -->
+            <div class="sales-filters">
+
+                <div class="sales-search">
+
+                    <input
+                        type="text"
+                        id="products-search-input"
+                        placeholder="Rechercher par référence, désignation ou catégorie..."
+                    >
+
+                </div>
+
+                <!-- Filtre catégorie -->
+                <select id="product-category-filter">
+
+                    <option value="">
+                        Toutes les catégories
+                    </option>
+
+                    <option value="camera">
+                        Caméras
+                    </option>
+
+                    <option value="alarme">
+                        Alarmes
+                    </option>
+
+                    <option value="fibre-optique">
+                        Fibre optique
+                    </option>
+
+                    <option value="reseau">
+                        Réseau
+                    </option>
+
+                    <option value="domotique">
+                        Domotique
+                    </option>
+
+                    <option value="accessoire">
+                        Accessoires
+                    </option>
+
+                    <option value="autre">
+                        Autres
+                    </option>
+
+                </select>
+
+                <!-- Filtre fournisseur -->
+                <select id="product-supplier-filter">
+
+                    <option value="">
+                        Tous les fournisseurs
+                    </option>
+
+                    <option value="fournisseur-1">
+                        Fournisseur 1
+                    </option>
+
+                    <option value="fournisseur-2">
+                        Fournisseur 2
+                    </option>
+
+                    <option value="fournisseur-3">
+                        Fournisseur 3
+                    </option>
+
+                    <option value="sans-fournisseur">
+                        Sans fournisseur
+                    </option>
+
+                </select>
+
+                <!-- Filtre état du stock -->
+                <select id="product-stock-filter">
+
+                    <option value="">
+                        Tous les niveaux de stock
+                    </option>
+
+                    <option value="disponible">
+                        Stock disponible
+                    </option>
+
+                    <option value="faible">
+                        Stock faible
+                    </option>
+
+                    <option value="rupture">
+                        Rupture de stock
+                    </option>
+
+                    <option value="surstock">
+                        Surstock
+                    </option>
+
+                </select>
+
+                <!-- Filtre statut -->
+                <select id="product-status-filter">
+
+                    <option value="">
+                        Tous les statuts
+                    </option>
+
+                    <option value="actif">
+                        Actif
+                    </option>
+
+                    <option value="inactif">
+                        Inactif
+                    </option>
+
+                    <option value="archive">
+                        Archivé
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- ===== Tableau des produits ===== -->
+            <div class="sales-table-container">
+
+                <table class="sales-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Référence</th>
+                            <th>Désignation</th>
+                            <th>Catégorie</th>
+                            <th>Prix d'achat</th>
+                            <th>Prix de vente</th>
+                            <th>Stock actuel</th>
+                            <th>Seuil d'alerte</th>
+                            <th>État du stock</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="products-table-body">
+
+                        <!-- ===== Exemple produit 1 ===== -->
+                        <tr>
+
+                            <td>#PRD0001</td>
+
+                            <td>Caméra rotative Wi-Fi</td>
+
+                            <td>Caméras</td>
+
+                            <td>22 000 FCFA</td>
+
+                            <td>35 000 FCFA</td>
+
+                            <td>24</td>
+
+                            <td>5</td>
+
+                            <td>
+                                <span class="status-badge status-paid">
+                                    Disponible
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="status-badge status-paid">
+                                    Actif
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le produit"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le produit"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le produit"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- ===== Exemple produit 2 ===== -->
+                        <tr>
+
+                            <td>#PRD0002</td>
+
+                            <td>Caméra solaire 4G</td>
+
+                            <td>Caméras</td>
+
+                            <td>65 000 FCFA</td>
+
+                            <td>90 000 FCFA</td>
+
+                            <td>3</td>
+
+                            <td>5</td>
+
+                            <td>
+                                <span class="status-badge status-pending">
+                                    Stock faible
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="status-badge status-paid">
+                                    Actif
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le produit"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le produit"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le produit"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- ===== Exemple produit 3 ===== -->
+                        <tr>
+
+                            <td>#PRD0003</td>
+
+                            <td>Câble fibre optique 100 mètres</td>
+
+                            <td>Fibre optique</td>
+
+                            <td>40 000 FCFA</td>
+
+                            <td>58 000 FCFA</td>
+
+                            <td>0</td>
+
+                            <td>2</td>
+
+                            <td>
+                                <span class="status-badge status-cancelled">
+                                    Rupture
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="status-badge status-paid">
+                                    Actif
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le produit"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le produit"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le produit"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
