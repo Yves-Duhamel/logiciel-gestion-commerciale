@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transitaires</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ===== Sidebar ===== -->
+    <aside id="sidebar" class="sidebar">
+
+        <button id="sidebar-close" class="sidebar-close">
+            ✖
+        </button>
+
+        <a href="dashboard.html" class="logo">
+            <img src="../logo-vizibl.png" alt="Logo VISIBL">
+        </a>
+
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="dashboard.html" class="nav-link">
+                        📊 Tableau de bord
+                    </a>
+                </li>
+
+                <!-- ===== Menu Commercial ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>🛒 Commercial</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="ventes.html" class="nav-link">
+                                Ventes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="commandes.html" class="nav-link">
+                                Commandes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="clients.html" class="nav-link">
+                                Clients
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livraisons.html" class="nav-link">
+                                Livraisons
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livreurs.html" class="nav-link">
+                                Livreurs
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- ===== Menu Stock et approvisionnement ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>📦 Stock & Approvisionnement</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="produits.html" class="nav-link">
+                                Produits
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="approvisionnements.html" class="nav-link">
+                                Approvisionnements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fournisseurs.html" class="nav-link">
+                                Fournisseurs
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="transitaires.html" class="nav-link">
+                                Transitaires
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- ===== Menu Finance ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>💰 Finance</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="caisse.html" class="nav-link">
+                                Caisse
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="paiements.html" class="nav-link">
+                                Paiements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="factures.html" class="nav-link">
+                                Factures
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="comptabilité.html" class="nav-link">
+                                Comptabilité
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="rapports.html" class="nav-link">
+                        📈 Rapports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="paramètres.html" class="nav-link">
+                        ⚙️ Paramètres
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- ===== Contenu principal ===== -->
+    <main class="main-content">
+
+        <!-- ===== Header ===== -->
+        <header class="header">
+
+            <div class="header-left">
+
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    ☰
+                </button>
+
+                <a href="dashboard.html" class="logo">
+                    <img src="../logo-vizibl.png" alt="Logo VISIBL">
+                </a>
+
+                <h2>Transitaires</h2>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <!-- Icône de recherche visible sur mobile -->
+                    <button class="icon-btn" id="mobile-search-btn">
+                        🔍
+                    </button>
+
+                    <!-- Barre de recherche du header -->
+                    <div class="search-container">
+
+                        <input
+                            type="text"
+                            class="search-input"
+                            placeholder="Rechercher un transitaire..."
+                        >
+
+                        <button class="search-btn">
+                            🔍
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="header-icons">
+
+                    <button class="icon-btn notifications">
+                        🔔
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <div class="profile-menu">
+
+                        <button class="icon-btn">
+                            👤
+                        </button>
+
+                        <div class="dropdown-menu">
+
+                            <a href="#">
+                                Mon profil
+                            </a>
+
+                            <a href="#">
+                                Paramètres
+                            </a>
+
+                            <hr>
+
+                            <a href="#" class="logout">
+                                Déconnexion
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ===== Contenu de la page ===== -->
+        <section class="content">
+
+            <!-- ===== Présentation ===== -->
+            <div class="welcome-section">
+
+                <h2>Transitaires</h2>
+
+                <p>
+                    Enregistrez et gérez les transitaires chargés du transport,
+                    du dédouanement et de l'acheminement de vos marchandises.
+                </p>
+
+            </div>
+
+            <!-- ===== Bouton nouveau transitaire ===== -->
+            <div class="sales-toolbar">
+
+                <button class="btn-primary" id="new-forwarder-btn">
+                    ➕ Nouveau transitaire
+                </button>
+
+            </div>
+
+            <!-- ===== Recherche et filtres ===== -->
+            <div class="sales-filters">
+
+                <div class="sales-search">
+
+                    <input
+                        type="text"
+                        id="forwarders-search-input"
+                        placeholder="Rechercher par nom, téléphone, pays ou ville..."
+                    >
+
+                </div>
+
+                <!-- Filtre type de transport -->
+                <select id="forwarder-transport-filter">
+
+                    <option value="">
+                        Tous les transports
+                    </option>
+
+                    <option value="maritime">
+                        Transport maritime
+                    </option>
+
+                    <option value="aerien">
+                        Transport aérien
+                    </option>
+
+                    <option value="routier">
+                        Transport routier
+                    </option>
+
+                    <option value="ferroviaire">
+                        Transport ferroviaire
+                    </option>
+
+                    <option value="multimodal">
+                        Transport multimodal
+                    </option>
+
+                </select>
+
+                <!-- Filtre pays -->
+                <select id="forwarder-country-filter">
+
+                    <option value="">
+                        Tous les pays
+                    </option>
+
+                    <option value="cote-divoire">
+                        Côte d'Ivoire
+                    </option>
+
+                    <option value="chine">
+                        Chine
+                    </option>
+
+                    <option value="france">
+                        France
+                    </option>
+
+                    <option value="emirats">
+                        Émirats arabes unis
+                    </option>
+
+                    <option value="turquie">
+                        Turquie
+                    </option>
+
+                    <option value="autre">
+                        Autre
+                    </option>
+
+                </select>
+
+                <!-- Filtre statut -->
+                <select id="forwarder-status-filter">
+
+                    <option value="">
+                        Tous les statuts
+                    </option>
+
+                    <option value="actif">
+                        Actif
+                    </option>
+
+                    <option value="inactif">
+                        Inactif
+                    </option>
+
+                    <option value="suspendu">
+                        Suspendu
+                    </option>
+
+                    <option value="archive">
+                        Archivé
+                    </option>
+
+                </select>
+
+                <!-- Filtre disponibilité -->
+                <select id="forwarder-availability-filter">
+
+                    <option value="">
+                        Toutes les disponibilités
+                    </option>
+
+                    <option value="disponible">
+                        Disponible
+                    </option>
+
+                    <option value="mission">
+                        En mission
+                    </option>
+
+                    <option value="indisponible">
+                        Indisponible
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- ===== Tableau des transitaires ===== -->
+            <div class="sales-table-container">
+
+                <table class="sales-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>ID Transitaire</th>
+                            <th>Nom du transitaire</th>
+                            <th>Contact</th>
+                            <th>Téléphone</th>
+                            <th>Email</th>
+                            <th>Pays / Ville</th>
+                            <th>Transport</th>
+                            <th>Expéditions</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="forwarders-table-body">
+
+                        <!-- ===== Exemple transitaire 1 ===== -->
+                        <tr>
+
+                            <td>#TRS0001</td>
+
+                            <td>Abidjan Transit Services</td>
+
+                            <td>Kouamé Serge</td>
+
+                            <td>07 11 22 33 44</td>
+
+                            <td>contact@abidjantransit.ci</td>
+
+                            <td>Abidjan, Côte d'Ivoire</td>
+
+                            <td>Maritime</td>
+
+                            <td>18</td>
+
+                            <td>
+                                <span class="status-badge status-paid">
+                                    Actif
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le transitaire"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le transitaire"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le transitaire"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- ===== Exemple transitaire 2 ===== -->
+                        <tr>
+
+                            <td>#TRS0002</td>
+
+                            <td>Shenzhen Global Freight</td>
+
+                            <td>Chen Wang</td>
+
+                            <td>+86 135 0000 0000</td>
+
+                            <td>operations@sgfreight.com</td>
+
+                            <td>Shenzhen, Chine</td>
+
+                            <td>Maritime / Aérien</td>
+
+                            <td>9</td>
+
+                            <td>
+                                <span class="status-badge status-delivery">
+                                    En mission
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le transitaire"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le transitaire"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le transitaire"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- ===== Exemple transitaire 3 ===== -->
+                        <tr>
+
+                            <td>#TRS0003</td>
+
+                            <td>Africa Cargo Express</td>
+
+                            <td>Fatou Diarra</td>
+
+                            <td>05 66 77 88 99</td>
+
+                            <td>contact@africacargo.com</td>
+
+                            <td>Bamako, Mali</td>
+
+                            <td>Routier</td>
+
+                            <td>5</td>
+
+                            <td>
+                                <span class="status-badge status-pending">
+                                    Inactif
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le transitaire"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le transitaire"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le transitaire"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
