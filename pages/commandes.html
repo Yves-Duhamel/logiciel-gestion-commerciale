@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Commandes</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ===== Sidebar ===== -->
+    <aside id="sidebar" class="sidebar">
+
+        <button id="sidebar-close" class="sidebar-close">
+            ✖
+        </button>
+
+        <a href="dashboard.html" class="logo">
+            <img src="../logo-vizibl.png" alt="Logo">
+        </a>
+
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="dashboard.html" class="nav-link">
+                        📊 Tableau de bord
+                    </a>
+                </li>
+
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>🛒 Commercial</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="ventes.html" class="nav-link">
+                                Ventes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="commandes.html" class="nav-link">
+                                Commandes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Clients
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Livraisons
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Livreurs
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>📦 Stock & Approvisionnement</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="#" class="nav-link">
+                                Produits
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Approvisionnements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Fournisseurs
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Transitaires
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>💰 Finance</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="#" class="nav-link">
+                                Caisse
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Paiements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Factures
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link">
+                                Comptabilité
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="#" class="nav-link">
+                        📈 Rapports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-link">
+                        ⚙️ Paramètres
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- ===== Contenu principal ===== -->
+    <main class="main-content">
+
+        <!-- ===== Header ===== -->
+        <header class="header">
+
+            <div class="header-left">
+
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    ☰
+                </button>
+
+                <a href="dashboard.html" class="logo">
+                    <img src="../logo-vizibl.png" alt="Logo">
+                </a>
+
+                <h2>Commandes</h2>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <!-- Icône visible sur mobile -->
+                    <button class="icon-btn" id="mobile-search-btn">
+                        🔍
+                    </button>
+
+                    <!-- Barre de recherche -->
+                    <div class="search-container">
+
+                        <input
+                            type="text"
+                            class="search-input"
+                            placeholder="Rechercher une commande, un client..."
+                        >
+
+                        <button class="search-btn">
+                            🔍
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="header-icons">
+
+                    <button class="icon-btn notifications">
+                        🔔
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <div class="profile-menu">
+
+                        <button class="icon-btn">
+                            👤
+                        </button>
+
+                        <div class="dropdown-menu">
+
+                            <a href="#">
+                                Mon profil
+                            </a>
+
+                            <a href="#">
+                                Paramètres
+                            </a>
+
+                            <hr>
+
+                            <a href="#" class="logout">
+                                Déconnexion
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ===== Contenu de la page ===== -->
+        <section class="content">
+
+            <div class="welcome-section">
+
+                <h2>Gestion des commandes</h2>
+
+                <p>
+                    Enregistrez, consultez et gérez toutes les commandes
+                    de votre boutique.
+                </p>
+
+            </div>
+
+            <!-- ===== Bouton nouvelle commande ===== -->
+            <div class="sales-toolbar">
+
+                <button class="btn-primary" id="new-order-btn">
+                    ➕ Nouvelle commande
+                </button>
+
+            </div>
+
+            <!-- ===== Recherche et filtres ===== -->
+            <div class="sales-filters">
+
+                <div class="sales-search">
+
+                    <input
+                        type="text"
+                        id="orders-search-input"
+                        placeholder="Rechercher une commande, un client..."
+                    >
+
+                </div>
+
+                <!-- Filtre statut de la commande -->
+                <select id="order-status-filter">
+
+                    <option value="">
+                        Tous les statuts
+                    </option>
+
+                    <option value="brouillon">
+                        Brouillon
+                    </option>
+
+                    <option value="en-attente">
+                        En attente
+                    </option>
+
+                    <option value="confirmee">
+                        Confirmée
+                    </option>
+
+                    <option value="en-preparation">
+                        En préparation
+                    </option>
+
+                    <option value="prete">
+                        Prête
+                    </option>
+
+                    <option value="terminee">
+                        Terminée
+                    </option>
+
+                    <option value="annulee">
+                        Annulée
+                    </option>
+
+                </select>
+
+                <!-- Filtre mode de paiement prévu -->
+                <select id="payment-method-filter">
+
+                    <option value="">
+                        Tous les paiements prévus
+                    </option>
+
+                    <option value="especes">
+                        Espèces
+                    </option>
+
+                    <option value="mobile-money">
+                        Mobile Money
+                    </option>
+
+                    <option value="virement">
+                        Virement bancaire
+                    </option>
+
+                    <option value="carte">
+                        Carte bancaire
+                    </option>
+
+                    <option value="credit">
+                        Crédit
+                    </option>
+
+                </select>
+
+                <!-- Filtre origine de la commande -->
+                <select id="order-origin-filter">
+
+                    <option value="">
+                        Toutes les origines
+                    </option>
+
+                    <option value="boutique">
+                        Boutique
+                    </option>
+
+                    <option value="telephone">
+                        Téléphone
+                    </option>
+
+                    <option value="whatsapp">
+                        WhatsApp
+                    </option>
+
+                    <option value="facebook">
+                        Facebook
+                    </option>
+
+                    <option value="site-web">
+                        Site internet
+                    </option>
+
+                    <option value="autre">
+                        Autre
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- ===== Tableau des commandes ===== -->
+            <div class="sales-table-container">
+
+                <table class="sales-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>N° Commande</th>
+                            <th>Date</th>
+                            <th>Client</th>
+                            <th>Total à payer</th>
+                            <th>Livreur assigné</th>
+                            <th>Statut</th>
+                            <th>Livraison prévue</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="orders-table-body">
+
+                        <!-- Exemple de commande 1 -->
+                        <tr>
+
+                            <td>#CMD0001</td>
+
+                            <td>20/07/2026</td>
+
+                            <td>Awa Traoré</td>
+
+                            <td>82 500 FCFA</td>
+
+                            <td>
+                                <span class="driver-name">
+                                    Ali Koné
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="status-badge status-delivery">
+                                    En préparation
+                                </span>
+                            </td>
+
+                            <td>
+                                21/07/2026
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir la commande"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier la commande"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer la commande"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- Exemple de commande 2 -->
+                        <tr>
+
+                            <td>#CMD0002</td>
+
+                            <td>20/07/2026</td>
+
+                            <td>Client comptoir</td>
+
+                            <td>35 000 FCFA</td>
+
+                            <td>
+                                <span class="driver-name">
+                                    Aucun — retrait boutique
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="status-badge status-pending">
+                                    En attente
+                                </span>
+                            </td>
+
+                            <td>
+                                Retrait en boutique
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir la commande"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier la commande"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer la commande"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
