@@ -32,7 +32,12 @@ const profileMenu = document.querySelector('.profile-menu');
 if (profileBtn) {
     profileBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        profileMenu.classList.toggle('active');
+        // Sur mobile, fermer la recherche avant d'ouvrir le profil
+if (window.innerWidth <= 768) {
+    searchContainer.classList.remove("active");
+}
+
+profileMenu.classList.toggle("active");
     });
 
     // Fermer le menu en cliquant ailleurs
@@ -168,7 +173,12 @@ if (mobileSearchBtn && searchContainer) {
 
         e.stopPropagation();
 
-        searchContainer.classList.toggle("active");
+        // Sur mobile, fermer le menu profil avant d'ouvrir la recherche
+if (window.innerWidth <= 768) {
+    profileMenu.classList.remove("active");
+}
+
+searchContainer.classList.toggle("active");
 
     });
 
