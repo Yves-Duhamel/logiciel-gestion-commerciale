@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Livreurs</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ===== Sidebar ===== -->
+    <aside id="sidebar" class="sidebar">
+
+        <button id="sidebar-close" class="sidebar-close">
+            ✖
+        </button>
+
+        <a href="dashboard.html" class="logo">
+            <img src="../logo-vizibl.png" alt="Logo VISIBL">
+        </a>
+
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="dashboard.html" class="nav-link">
+                        📊 Tableau de bord
+                    </a>
+                </li>
+
+                <!-- ===== Menu Commercial ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>🛒 Commercial</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="ventes.html" class="nav-link">
+                                Ventes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="commandes.html" class="nav-link">
+                                Commandes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="clients.html" class="nav-link">
+                                Clients
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livraisons.html" class="nav-link">
+                                Livraisons
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livreurs.html" class="nav-link">
+                                Livreurs
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- ===== Menu Stock et approvisionnement ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>📦 Stock & Approvisionnement</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="produits.html" class="nav-link">
+                                Produits
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="approvisionnements.html" class="nav-link">
+                                Approvisionnements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fournisseurs.html" class="nav-link">
+                                Fournisseurs
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="transitaires.html" class="nav-link">
+                                Transitaires
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- ===== Menu Finance ===== -->
+                <li class="menu-category">
+
+                    <a href="#" class="nav-link category-title">
+                        <span>💰 Finance</span>
+                        <span class="arrow">▼</span>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="caisse.html" class="nav-link">
+                                Caisse
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="paiements.html" class="nav-link">
+                                Paiements
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="factures.html" class="nav-link">
+                                Factures
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="comptabilite.html" class="nav-link">
+                                Comptabilité
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="rapports.html" class="nav-link">
+                        📈 Rapports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="parametres.html" class="nav-link">
+                        ⚙️ Paramètres
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- ===== Contenu principal ===== -->
+    <main class="main-content">
+
+        <!-- ===== Header ===== -->
+        <header class="header">
+
+            <div class="header-left">
+
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    ☰
+                </button>
+
+                <a href="dashboard.html" class="logo">
+                    <img src="../logo-vizibl.png" alt="Logo VISIBL">
+                </a>
+
+                <h2>Livreurs</h2>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <!-- Icône visible sur mobile -->
+                    <button class="icon-btn" id="mobile-search-btn">
+                        🔍
+                    </button>
+
+                    <!-- Barre de recherche -->
+                    <div class="search-container">
+
+                        <input
+                            type="text"
+                            class="search-input"
+                            placeholder="Rechercher un livreur..."
+                        >
+
+                        <button class="search-btn">
+                            🔍
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="header-icons">
+
+                    <button class="icon-btn notifications">
+                        🔔
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <div class="profile-menu">
+
+                        <button class="icon-btn">
+                            👤
+                        </button>
+
+                        <div class="dropdown-menu">
+
+                            <a href="#">
+                                Mon profil
+                            </a>
+
+                            <a href="#">
+                                Paramètres
+                            </a>
+
+                            <hr>
+
+                            <a href="#" class="logout">
+                                Déconnexion
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ===== Contenu de la page ===== -->
+        <section class="content">
+
+            <!-- ===== Présentation ===== -->
+            <div class="welcome-section">
+
+                <h2>Livreurs</h2>
+
+                <p>
+                    Enregistrez, consultez et gérez les livreurs chargés
+                    d'effectuer les livraisons de votre boutique.
+                </p>
+
+            </div>
+
+            <!-- ===== Bouton nouveau livreur ===== -->
+            <div class="sales-toolbar">
+
+                <button class="btn-primary" id="new-driver-btn">
+                    ➕ Nouveau livreur
+                </button>
+
+            </div>
+
+            <!-- ===== Recherche et filtres ===== -->
+            <div class="sales-filters">
+
+                <div class="sales-search">
+
+                    <input
+                        type="text"
+                        id="drivers-search-input"
+                        placeholder="Rechercher par nom, téléphone ou zone..."
+                    >
+
+                </div>
+
+                <!-- Filtre statut -->
+                <select id="driver-status-filter">
+
+                    <option value="">
+                        Tous les statuts
+                    </option>
+
+                    <option value="disponible">
+                        Disponible
+                    </option>
+
+                    <option value="en-livraison">
+                        En livraison
+                    </option>
+
+                    <option value="indisponible">
+                        Indisponible
+                    </option>
+
+                    <option value="suspendu">
+                        Suspendu
+                    </option>
+
+                    <option value="inactif">
+                        Inactif
+                    </option>
+
+                </select>
+
+                <!-- Filtre type de véhicule -->
+                <select id="vehicle-type-filter">
+
+                    <option value="">
+                        Tous les véhicules
+                    </option>
+
+                    <option value="moto">
+                        Moto
+                    </option>
+
+                    <option value="velo">
+                        Vélo
+                    </option>
+
+                    <option value="tricycle">
+                        Tricycle
+                    </option>
+
+                    <option value="voiture">
+                        Voiture
+                    </option>
+
+                    <option value="camionnette">
+                        Camionnette
+                    </option>
+
+                    <option value="sans-vehicule">
+                        Sans véhicule
+                    </option>
+
+                </select>
+
+                <!-- Filtre zone -->
+                <select id="driver-zone-filter">
+
+                    <option value="">
+                        Toutes les zones
+                    </option>
+
+                    <option value="abobo">
+                        Abobo
+                    </option>
+
+                    <option value="adjame">
+                        Adjamé
+                    </option>
+
+                    <option value="attecoube">
+                        Attécoubé
+                    </option>
+
+                    <option value="cocody">
+                        Cocody
+                    </option>
+
+                    <option value="koumassi">
+                        Koumassi
+                    </option>
+
+                    <option value="marcory">
+                        Marcory
+                    </option>
+
+                    <option value="plateau">
+                        Plateau
+                    </option>
+
+                    <option value="port-bouet">
+                        Port-Bouët
+                    </option>
+
+                    <option value="treichville">
+                        Treichville
+                    </option>
+
+                    <option value="yopougon">
+                        Yopougon
+                    </option>
+
+                    <option value="toutes-zones">
+                        Toutes les zones
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- ===== Tableau des livreurs ===== -->
+            <div class="sales-table-container">
+
+                <table class="sales-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>ID Livreur</th>
+                            <th>Nom complet</th>
+                            <th>Téléphone</th>
+                            <th>Véhicule</th>
+                            <th>Immatriculation</th>
+                            <th>Zone</th>
+                            <th>Livraisons</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="drivers-table-body">
+
+                        <!-- ===== Exemple livreur 1 ===== -->
+                        <tr>
+
+                            <td>#LVR0001</td>
+
+                            <td>Ali Koné</td>
+
+                            <td>07 00 00 00 01</td>
+
+                            <td>Moto</td>
+
+                            <td>AB 1234 CI</td>
+
+                            <td>Cocody</td>
+
+                            <td>28</td>
+
+                            <td>
+                                <span class="status-badge status-paid">
+                                    Disponible
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le livreur"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le livreur"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le livreur"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- ===== Exemple livreur 2 ===== -->
+                        <tr>
+
+                            <td>#LVR0002</td>
+
+                            <td>Moussa Traoré</td>
+
+                            <td>05 00 00 00 02</td>
+
+                            <td>Moto</td>
+
+                            <td>CD 5678 CI</td>
+
+                            <td>Marcory</td>
+
+                            <td>19</td>
+
+                            <td>
+                                <span class="status-badge status-delivery">
+                                    En livraison
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le livreur"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le livreur"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le livreur"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- ===== Exemple livreur 3 ===== -->
+                        <tr>
+
+                            <td>#LVR0003</td>
+
+                            <td>Jean Kouassi</td>
+
+                            <td>01 00 00 00 03</td>
+
+                            <td>Tricycle</td>
+
+                            <td>EF 9012 CI</td>
+
+                            <td>Yopougon</td>
+
+                            <td>14</td>
+
+                            <td>
+                                <span class="status-badge status-pending">
+                                    Indisponible
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button
+                                        class="action-btn view-btn"
+                                        title="Voir le livreur"
+                                    >
+                                        👁
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit-btn"
+                                        title="Modifier le livreur"
+                                    >
+                                        ✏️
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete-btn"
+                                        title="Supprimer le livreur"
+                                    >
+                                        🗑️
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
