@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rapports</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ===== Sidebar ===== -->
+<aside id="sidebar" class="sidebar">
+
+    <button id="sidebar-close" class="sidebar-close">
+        ✖
+    </button>
+
+    <a href="dashboard.html" class="logo">
+        <img src="../logo-vizibl.png" alt="Logo VISIBL">
+    </a>
+
+    <nav>
+        <ul>
+
+            <li>
+                <a href="dashboard.html" class="nav-link">
+                    📊 Tableau de bord
+                </a>
+            </li>
+
+            <!-- ===== Menu Commercial ===== -->
+            <li class="menu-category">
+
+                <a href="#" class="nav-link category-title">
+                    <span>🛒 Commercial</span>
+                    <span class="arrow">▼</span>
+                </a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="ventes.html" class="nav-link">
+                            Ventes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="commandes.html" class="nav-link">
+                            Commandes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="clients.html" class="nav-link">
+                            Clients
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="livraisons.html" class="nav-link">
+                            Livraisons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="livreurs.html" class="nav-link">
+                            Livreurs
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <!-- ===== Menu Stock et approvisionnement ===== -->
+            <li class="menu-category">
+
+                <a href="#" class="nav-link category-title">
+                    <span>📦 Stock & Approvisionnement</span>
+                    <span class="arrow">▼</span>
+                </a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="produits.html" class="nav-link">
+                            Produits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="approvisionnements.html" class="nav-link">
+                            Approvisionnements
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="fournisseurs.html" class="nav-link">
+                            Fournisseurs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="transitaires.html" class="nav-link">
+                            Transitaires
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <!-- ===== Menu Finance ===== -->
+            <li class="menu-category">
+
+                <a href="#" class="nav-link category-title">
+                    <span>💰 Finance</span>
+                    <span class="arrow">▼</span>
+                </a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="caisse.html" class="nav-link">
+                            Caisse
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="paiements.html" class="nav-link">
+                            Paiements
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="factures.html" class="nav-link">
+                            Factures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="comptabilité.html" class="nav-link">
+                            Comptabilité
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="rapports.html" class="nav-link">
+                    📈 Rapports
+                </a>
+            </li>
+
+            <li>
+                <a href="paramètres.html" class="nav-link">
+                    ⚙️ Paramètres
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+</aside>
+
+<!-- ===== Contenu principal ===== -->
+<main class="main-content">
+
+    <!-- ===== Header ===== -->
+    <header class="header">
+
+        <div class="header-left">
+
+            <button id="sidebar-toggle" class="sidebar-toggle">
+                ☰
+            </button>
+
+            <a href="dashboard.html" class="logo">
+                <img src="../logo-vizibl.png" alt="Logo VISIBL">
+            </a>
+
+            <h2>Rapports</h2>
+
+        </div>
+
+        <div class="header-right">
+
+            <div class="search-box">
+
+                <!-- Icône de recherche visible sur mobile -->
+                <button class="icon-btn" id="mobile-search-btn">
+                    🔍
+                </button>
+
+                <!-- Barre de recherche du header -->
+                <div class="search-container">
+
+                    <input
+                        type="text"
+                        class="search-input"
+                        placeholder="Rechercher un rapport..."
+                    >
+
+                    <button class="search-btn">
+                        🔍
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="header-icons">
+
+                <button class="icon-btn notifications">
+                    🔔
+                    <span class="notification-badge">3</span>
+                </button>
+
+                <div class="profile-menu">
+
+                    <button class="icon-btn">
+                        👤
+                    </button>
+
+                    <div class="dropdown-menu">
+
+                        <a href="#">
+                            Mon profil
+                        </a>
+
+                        <a href="#">
+                            Paramètres
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="logout">
+                            Déconnexion
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ===== Contenu de la page ===== -->
+    <section class="content">
+
+        <!-- ===== Présentation ===== -->
+        <div class="welcome-section">
+
+            <h2>Rapports</h2>
+
+            <p>
+                Consultez, générez et exportez les rapports commerciaux,
+                financiers, logistiques et de gestion de l'entreprise.
+            </p>
+
+        </div>
+
+        <!-- ===== Bouton générer un rapport ===== -->
+        <div class="sales-toolbar">
+
+            <button class="btn-primary" id="generate-report-btn">
+                ➕ Générer un rapport
+            </button>
+
+        </div>
+
+        <!-- ===== Recherche et filtres ===== -->
+        <div class="sales-filters">
+
+            <div class="sales-search">
+
+                <input
+                    type="text"
+                    id="reports-search-input"
+                    placeholder="Rechercher par titre, catégorie ou période..."
+                >
+
+            </div>
+
+            <!-- Filtre catégorie -->
+            <select id="report-category-filter">
+
+                <option value="">
+                    Toutes les catégories
+                </option>
+
+                <option value="commercial">
+                    Commercial
+                </option>
+
+                <option value="stock">
+                    Stock
+                </option>
+
+                <option value="approvisionnement">
+                    Approvisionnement
+                </option>
+
+                <option value="finance">
+                    Finance
+                </option>
+
+                <option value="comptabilite">
+                    Comptabilité
+                </option>
+
+                <option value="livraison">
+                    Livraison
+                </option>
+
+            </select>
+
+            <!-- Filtre type de rapport -->
+            <select id="report-type-filter">
+
+                <option value="">
+                    Tous les rapports
+                </option>
+
+                <option value="ventes">
+                    Rapport des ventes
+                </option>
+
+                <option value="commandes">
+                    Rapport des commandes
+                </option>
+
+                <option value="clients">
+                    Rapport des clients
+                </option>
+
+                <option value="stock">
+                    Rapport de stock
+                </option>
+
+                <option value="approvisionnements">
+                    Rapport des approvisionnements
+                </option>
+
+                <option value="paiements">
+                    Rapport des paiements
+                </option>
+
+                <option value="caisse">
+                    Rapport de caisse
+                </option>
+
+                <option value="comptabilite">
+                    Rapport comptable
+                </option>
+
+                <option value="livraisons">
+                    Rapport des livraisons
+                </option>
+
+            </select>
+
+            <!-- Filtre période -->
+            <select id="report-period-filter">
+
+                <option value="">
+                    Toutes les périodes
+                </option>
+
+                <option value="aujourdhui">
+                    Aujourd'hui
+                </option>
+
+                <option value="semaine">
+                    Cette semaine
+                </option>
+
+                <option value="mois">
+                    Ce mois
+                </option>
+
+                <option value="trimestre">
+                    Ce trimestre
+                </option>
+
+                <option value="annee">
+                    Cette année
+                </option>
+
+                <option value="personnalisee">
+                    Période personnalisée
+                </option>
+
+            </select>
+
+            <!-- Filtre format -->
+            <select id="report-format-filter">
+
+                <option value="">
+                    Tous les formats
+                </option>
+
+                <option value="pdf">
+                    PDF
+                </option>
+
+                <option value="excel">
+                    Excel
+                </option>
+
+                <option value="csv">
+                    CSV
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- ===== Tableau des rapports ===== -->
+        <div class="sales-table-container">
+
+            <table class="sales-table">
+
+                <thead>
+
+                    <tr>
+                        <th>ID Rapport</th>
+                        <th>Titre du rapport</th>
+                        <th>Catégorie</th>
+                        <th>Période</th>
+                        <th>Date de génération</th>
+                        <th>Format</th>
+                        <th>Généré par</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="reports-table-body">
+
+                    <!-- ===== Exemple rapport 1 ===== -->
+                    <tr>
+
+                        <td>#RPT0001</td>
+
+                        <td>Rapport mensuel des ventes</td>
+
+                        <td>Commercial</td>
+
+                        <td>Juillet 2026</td>
+
+                        <td>20/07/2026</td>
+
+                        <td>PDF</td>
+
+                        <td>Administrateur</td>
+
+                        <td>
+                            <span class="status-badge status-paid">
+                                Disponible
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button
+                                    class="action-btn view-btn"
+                                    title="Voir le rapport"
+                                >
+                                    👁
+                                </button>
+
+                                <button
+                                    class="action-btn"
+                                    title="Télécharger le rapport"
+                                >
+                                    📥
+                                </button>
+
+                                <button
+                                    class="action-btn"
+                                    title="Imprimer le rapport"
+                                >
+                                    🖨️
+                                </button>
+
+                                <button
+                                    class="action-btn delete-btn"
+                                    title="Supprimer le rapport"
+                                >
+                                    🗑️
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <!-- ===== Exemple rapport 2 ===== -->
+                    <tr>
+
+                        <td>#RPT0002</td>
+
+                        <td>État actuel du stock</td>
+
+                        <td>Stock</td>
+
+                        <td>Au 20 juillet 2026</td>
+
+                        <td>20/07/2026</td>
+
+                        <td>Excel</td>
+
+                        <td>Gestionnaire de stock</td>
+
+                        <td>
+                            <span class="status-badge status-paid">
+                                Disponible
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button
+                                    class="action-btn view-btn"
+                                    title="Voir le rapport"
+                                >
+                                    👁
+                                </button>
+
+                                <button
+                                    class="action-btn"
+                                    title="Télécharger le rapport"
+                                >
+                                    📥
+                                </button>
+
+                                <button
+                                    class="action-btn"
+                                    title="Imprimer le rapport"
+                                >
+                                    🖨️
+                                </button>
+
+                                <button
+                                    class="action-btn delete-btn"
+                                    title="Supprimer le rapport"
+                                >
+                                    🗑️
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <!-- ===== Exemple rapport 3 ===== -->
+                    <tr>
+
+                        <td>#RPT0003</td>
+
+                        <td>Rapport financier trimestriel</td>
+
+                        <td>Finance</td>
+
+                        <td>Deuxième trimestre 2026</td>
+
+                        <td>18/07/2026</td>
+
+                        <td>PDF</td>
+
+                        <td>Comptable</td>
+
+                        <td>
+                            <span class="status-badge status-pending">
+                                En préparation
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button
+                                    class="action-btn view-btn"
+                                    title="Voir le rapport"
+                                >
+                                    👁
+                                </button>
+
+                                <button
+                                    class="action-btn edit-btn"
+                                    title="Modifier le rapport"
+                                >
+                                    ✏️
+                                </button>
+
+                                <button
+                                    class="action-btn delete-btn"
+                                    title="Supprimer le rapport"
+                                >
+                                    🗑️
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <!-- ===== Exemple rapport 4 ===== -->
+                    <tr>
+
+                        <td>#RPT0004</td>
+
+                        <td>Performance des livreurs</td>
+
+                        <td>Livraison</td>
+
+                        <td>Juillet 2026</td>
+
+                        <td>17/07/2026</td>
+
+                        <td>Excel</td>
+
+                        <td>Responsable logistique</td>
+
+                        <td>
+                            <span class="status-badge status-paid">
+                                Disponible
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button
+                                    class="action-btn view-btn"
+                                    title="Voir le rapport"
+                                >
+                                    👁
+                                </button>
+
+                                <button
+                                    class="action-btn"
+                                    title="Télécharger le rapport"
+                                >
+                                    📥
+                                </button>
+
+                                <button
+                                    class="action-btn"
+                                    title="Imprimer le rapport"
+                                >
+                                    🖨️
+                                </button>
+
+                                <button
+                                    class="action-btn delete-btn"
+                                    title="Supprimer le rapport"
+                                >
+                                    🗑️
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
