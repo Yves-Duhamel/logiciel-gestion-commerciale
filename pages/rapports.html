@@ -1,3 +1,136 @@
+BASE DE DONNEES BOUTIQUE .xlsx
+Feuille de calcul
+Texte collé(2).txt
+Document
+Texte collé(3).txt
+Document
+prochaine page mais cette fois ci sert toi de ce code : 
+Texte collé(4).txt
+Document
+prochaine feuille sert toi de ce code stp : 
+Texte collé(5).txt
+Document
+stp fais les modifications et renvoi moi le code : 
+Texte collé(6).txt
+Document
+sert toi du code de transitaires.html et donne moi le code de paiements.html on garde toujours la meme logique, voici le code : 
+Texte collé(7).txt
+Document
+ok voici le code transitaires.html : 
+
+Le problème vient presque sûrement de l’un de ces points :
+
+Les classes HTML ne correspondent pas au CSS
+
+Dans ton HTML, tu dois avoir exactement :
+
+<div class="report-kpi-grid">
+
+et chaque carte doit commencer par :
+
+<div class="report-kpi-card">
+
+Le graphique doit commencer par :
+
+<div class="report-main-chart">
+
+Si ton HTML contient encore :
+
+<div class="stats-grid">
+
+ou :
+
+<div class="stat-card">
+
+le nouveau CSS ne s’appliquera pas.
+
+Le fichier CSS n’est peut-être pas chargé
+
+Dans rapports.html, vérifie que tu as bien :
+
+<link rel="stylesheet" href="../css/style.css">
+
+Puis fais :
+
+Ctrl + Shift + R
+
+ou :
+
+Ctrl + F5
+Le CSS est peut-être collé à l’intérieur d’un autre bloc
+
+À la fin de style.css, vérifie que le bloc précédent est correctement fermé avec :
+
+}
+
+Le nouveau CSS ne doit pas être placé à l’intérieur d’un @media, d’une classe ou d’une accolade non fermée.
+
+Ton ancien graphique apparaît peut-être encore
+
+Dans le HTML, il faut supprimer l’ancien bloc :
+
+<div class="stats-grid">
+    ...
+</div>
+
+<div class="chart-container">
+    ...
+</div>
+
+et le remplacer entièrement par le nouveau bloc.
+
+Le fichier modifié n’est peut-être pas celui utilisé par la page
+
+Ajoute temporairement tout à la fin de style.css :
+
+.report-kpi-card {
+    border: 5px solid red !important;
+}
+
+Actualise la page.
+
+Si les cartes ont une bordure rouge, le CSS est bien connecté.
+Si rien ne devient rouge, ton fichier style.css n’est pas chargé ou la classe HTML n’est pas report-kpi-card.
+
+Fais aussi ce test :
+
+body {
+    background: red !important;
+}
+
+Si toute la page ne devient pas rouge, le problème vient du lien vers le fichier CSS.
+
+Envoie-moi maintenant uniquement ces deux parties :
+
+le bloc HTML qui commence par <div class="report-kpi-grid">
+les 20 dernières lignes de ton fichier style.css
+
+Je pourrai identifier précisément l’erreur.
+
+je peux t'envoyer le html comme ça tu pourras faire la modification directement dans la partie concernée et me ramener le code 
+
+Oui, envoie-moi le fichier HTML complet de rapports.html.
+
+Je modifierai directement la partie concernée et je te renverrai le code HTML complet corrigé, prêt à remplacer l’ancien.
+
+Texte collé(8).txt
+Document
+Réfléchi pendant 51s
+
+J’ai corrigé directement ton fichier. Le problème venait bien des ... laissés dans le HTML et de l’ancien bloc graphique qui n’avait pas été supprimé.
+
+Tu peux télécharger le fichier complet corrigé ici :
+
+rapports_corrige.html
+
+Remplace simplement ton ancien fichier rapports.html par celui-ci, puis fais Ctrl + F5 pour actualiser la page.
+
+Bibliothèque
+/
+rapports_corrige.html
+Bibliothèque
+/
+rapports_corrige.html
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -393,55 +526,155 @@
         </div>
 
         <!-- ===== Cartes KPI ===== -->
-
         <div class="report-kpi-grid">
 
-    ...
-
-</div>
-
-<div class="report-main-chart">
-
-    ...
-
-</div>
-
-                    <h3>
-                        Évolution du chiffre d'affaires
-                    </h3>
-
-                    <p>
-                        Comparaison des ventes réalisées sur la période sélectionnée
-                    </p>
-
+            <div class="report-kpi-card">
+                <div class="report-kpi-top">
+                    <div class="report-kpi-icon income-icon">💰</div>
+                    <span class="report-kpi-badge positive">↗ +12,5 %</span>
                 </div>
-
-                <select id="sales-chart-filter">
-
-                    <option value="jour">
-                        Par jour
-                    </option>
-
-                    <option value="semaine">
-                        Par semaine
-                    </option>
-
-                    <option value="mois">
-                        Par mois
-                    </option>
-
-                </select>
-
+                <div class="report-kpi-content">
+                    <p class="report-kpi-title">Chiffre d'affaires</p>
+                    <h3 class="report-kpi-value">4 850 000 <span>FCFA</span></h3>
+                    <p class="report-kpi-description positive-text">En progression par rapport au mois dernier</p>
+                </div>
+                <div class="report-kpi-progress">
+                    <div class="report-kpi-progress-bar" style="width: 82%;"></div>
+                </div>
             </div>
 
-            <div class="chart-placeholder">
+            <div class="report-kpi-card">
+                <div class="report-kpi-top">
+                    <div class="report-kpi-icon sales-icon">🛒</div>
+                    <span class="report-kpi-badge positive">↗ +18</span>
+                </div>
+                <div class="report-kpi-content">
+                    <p class="report-kpi-title">Nombre de ventes</p>
+                    <h3 class="report-kpi-value">124</h3>
+                    <p class="report-kpi-description positive-text">18 ventes supplémentaires ce mois</p>
+                </div>
+                <div class="report-kpi-progress">
+                    <div class="report-kpi-progress-bar" style="width: 74%;"></div>
+                </div>
+            </div>
 
+            <div class="report-kpi-card">
+                <div class="report-kpi-top">
+                    <div class="report-kpi-icon average-icon">🧾</div>
+                    <span class="report-kpi-badge neutral">Moyenne</span>
+                </div>
+                <div class="report-kpi-content">
+                    <p class="report-kpi-title">Panier moyen</p>
+                    <h3 class="report-kpi-value">39 113 <span>FCFA</span></h3>
+                    <p class="report-kpi-description">Montant moyen enregistré par vente</p>
+                </div>
+                <div class="report-kpi-progress">
+                    <div class="report-kpi-progress-bar" style="width: 64%;"></div>
+                </div>
+            </div>
+
+            <div class="report-kpi-card">
+                <div class="report-kpi-top">
+                    <div class="report-kpi-icon collected-icon">✅</div>
+                    <span class="report-kpi-badge positive">80,9 %</span>
+                </div>
+                <div class="report-kpi-content">
+                    <p class="report-kpi-title">Montant encaissé</p>
+                    <h3 class="report-kpi-value">3 925 000 <span>FCFA</span></h3>
+                    <p class="report-kpi-description">Sur un total facturé de 4 850 000 FCFA</p>
+                </div>
+                <div class="report-kpi-progress">
+                    <div class="report-kpi-progress-bar" style="width: 81%;"></div>
+                </div>
+            </div>
+
+            <div class="report-kpi-card">
+                <div class="report-kpi-top">
+                    <div class="report-kpi-icon pending-icon">⏳</div>
+                    <span class="report-kpi-badge warning">19,1 %</span>
+                </div>
+                <div class="report-kpi-content">
+                    <p class="report-kpi-title">Reste à encaisser</p>
+                    <h3 class="report-kpi-value">925 000 <span>FCFA</span></h3>
+                    <p class="report-kpi-description warning-text">Paiements clients encore en attente</p>
+                </div>
+                <div class="report-kpi-progress">
+                    <div class="report-kpi-progress-bar warning-bar" style="width: 19%;"></div>
+                </div>
+            </div>
+
+            <div class="report-kpi-card best-product-card">
+                <div class="report-kpi-top">
+                    <div class="report-kpi-icon product-icon">🏆</div>
+                    <span class="report-kpi-badge best">N° 1</span>
+                </div>
+                <div class="report-kpi-content">
+                    <p class="report-kpi-title">Produit le plus vendu</p>
+                    <h3 class="report-kpi-value product-name">Caméra solaire 4G</h3>
+                    <p class="report-kpi-description">28 unités vendues sur la période</p>
+                </div>
+                <div class="report-kpi-progress">
+                    <div class="report-kpi-progress-bar product-bar" style="width: 88%;"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ===== Graphique principal ===== -->
+        <div class="report-main-chart">
+
+            <div class="report-chart-header">
+                <div class="report-chart-title">
+                    <div class="report-chart-icon">📈</div>
+                    <div>
+                        <h3>Évolution du chiffre d'affaires</h3>
+                        <p>Comparaison des ventes réalisées sur la période sélectionnée</p>
+                    </div>
+                </div>
+
+                <div class="report-chart-actions">
+                    <div class="report-chart-period">
+                        <button type="button" class="chart-period-btn active">Jour</button>
+                        <button type="button" class="chart-period-btn">Semaine</button>
+                        <button type="button" class="chart-period-btn">Mois</button>
+                    </div>
+                    <button type="button" class="chart-options-btn" title="Plus d'options">⋮</button>
+                </div>
+            </div>
+
+            <div class="report-chart-summary">
+                <div>
+                    <span class="chart-summary-label">Total de la période</span>
+                    <strong>4 850 000 FCFA</strong>
+                </div>
+                <div class="chart-summary-growth">
+                    <span>↗ 12,5 %</span>
+                    <small>depuis la période précédente</small>
+                </div>
+            </div>
+
+            <div class="report-chart-area">
                 <canvas id="sales-report-chart"></canvas>
-
-                <p class="chart-empty-message">
-                    Le graphique de l'évolution des ventes sera affiché ici.
-                </p>
-
+                <div class="report-chart-placeholder">
+                    <div class="fake-chart-bars">
+                        <span style="height: 36%;"></span>
+                        <span style="height: 58%;"></span>
+                        <span style="height: 45%;"></span>
+                        <span style="height: 76%;"></span>
+                        <span style="height: 62%;"></span>
+                        <span style="height: 88%;"></span>
+                        <span style="height: 70%;"></span>
+                    </div>
+                    <div class="fake-chart-labels">
+                        <span>Lun</span>
+                        <span>Mar</span>
+                        <span>Mer</span>
+                        <span>Jeu</span>
+                        <span>Ven</span>
+                        <span>Sam</span>
+                        <span>Dim</span>
+                    </div>
+                </div>
             </div>
 
         </div>
