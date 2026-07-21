@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Factures</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ===== Sidebar ===== -->
+<aside id="sidebar" class="sidebar">
+
+    <button id="sidebar-close" class="sidebar-close">
+        ✖
+    </button>
+
+    <a href="dashboard.html" class="logo">
+        <img src="../logo-vizibl.png" alt="Logo VISIBL">
+    </a>
+
+    <nav>
+        <ul>
+
+            <li>
+                <a href="dashboard.html" class="nav-link">
+                    📊 Tableau de bord
+                </a>
+            </li>
+
+            <!-- ===== Menu Commercial ===== -->
+            <li class="menu-category">
+
+                <a href="#" class="nav-link category-title">
+                    <span>🛒 Commercial</span>
+                    <span class="arrow">▼</span>
+                </a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="ventes.html" class="nav-link">
+                            Ventes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="commandes.html" class="nav-link">
+                            Commandes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="clients.html" class="nav-link">
+                            Clients
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="livraisons.html" class="nav-link">
+                            Livraisons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="livreurs.html" class="nav-link">
+                            Livreurs
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <!-- ===== Menu Stock et approvisionnement ===== -->
+            <li class="menu-category">
+
+                <a href="#" class="nav-link category-title">
+                    <span>📦 Stock & Approvisionnement</span>
+                    <span class="arrow">▼</span>
+                </a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="produits.html" class="nav-link">
+                            Produits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="approvisionnements.html" class="nav-link">
+                            Approvisionnements
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="fournisseurs.html" class="nav-link">
+                            Fournisseurs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="transitaires.html" class="nav-link">
+                            Transitaires
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <!-- ===== Menu Finance ===== -->
+            <li class="menu-category">
+
+                <a href="#" class="nav-link category-title">
+                    <span>💰 Finance</span>
+                    <span class="arrow">▼</span>
+                </a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="caisse.html" class="nav-link">
+                            Caisse
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="paiements.html" class="nav-link">
+                            Paiements
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="factures.html" class="nav-link">
+                            Factures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="comptabilité.html" class="nav-link">
+                            Comptabilité
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="rapports.html" class="nav-link">
+                    📈 Rapports
+                </a>
+            </li>
+
+            <li>
+                <a href="paramètres.html" class="nav-link">
+                    ⚙️ Paramètres
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+</aside>
+
+<!-- ===== Contenu principal ===== -->
+<main class="main-content">
+
+    <!-- ===== Header ===== -->
+    <header class="header">
+
+        <div class="header-left">
+
+            <button id="sidebar-toggle" class="sidebar-toggle">
+                ☰
+            </button>
+
+            <a href="dashboard.html" class="logo">
+                <img src="../logo-vizibl.png" alt="Logo VISIBL">
+            </a>
+
+            <h2>Factures</h2>
+
+        </div>
+
+        <div class="header-right">
+
+            <div class="search-box">
+
+                <!-- Icône de recherche visible sur mobile -->
+                <button class="icon-btn" id="mobile-search-btn">
+                    🔍
+                </button>
+
+                <!-- Barre de recherche du header -->
+                <div class="search-container">
+
+                    <input
+                        type="text"
+                        class="search-input"
+                        placeholder="Rechercher une facture..."
+                    >
+
+                    <button class="search-btn">
+                        🔍
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="header-icons">
+
+                <button class="icon-btn notifications">
+                    🔔
+                    <span class="notification-badge">3</span>
+                </button>
+
+                <div class="profile-menu">
+
+                    <button class="icon-btn">
+                        👤
+                    </button>
+
+                    <div class="dropdown-menu">
+
+                        <a href="#">
+                            Mon profil
+                        </a>
+
+                        <a href="#">
+                            Paramètres
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="logout">
+                            Déconnexion
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ===== Contenu de la page ===== -->
+    <section class="content">
+
+        <!-- ===== Présentation ===== -->
+        <div class="welcome-section">
+
+            <h2>Factures</h2>
+
+            <p>
+                Créez, consultez et suivez les factures émises à vos clients,
+                les montants payés ainsi que les échéances restantes.
+            </p>
+
+        </div>
+
+        <!-- ===== Bouton nouvelle facture ===== -->
+        <div class="sales-toolbar">
+
+            <button class="btn-primary" id="new-invoice-btn">
+                ➕ Nouvelle facture
+            </button>
+
+        </div>
+
+        <!-- ===== Recherche et filtres ===== -->
+        <div class="sales-filters">
+
+            <div class="sales-search">
+
+                <input
+                    type="text"
+                    id="invoices-search-input"
+                    placeholder="Rechercher par numéro, client ou commande..."
+                >
+
+            </div>
+
+            <!-- Filtre statut -->
+            <select id="invoice-status-filter">
+
+                <option value="">
+                    Tous les statuts
+                </option>
+
+                <option value="brouillon">
+                    Brouillon
+                </option>
+
+                <option value="emise">
+                    Émise
+                </option>
+
+                <option value="payee">
+                    Payée
+                </option>
+
+                <option value="partielle">
+                    Partiellement payée
+                </option>
+
+                <option value="impayee">
+                    Impayée
+                </option>
+
+                <option value="retard">
+                    En retard
+                </option>
+
+                <option value="annulee">
+                    Annulée
+                </option>
+
+            </select>
+
+            <!-- Filtre client -->
+            <select id="invoice-client-filter">
+
+                <option value="">
+                    Tous les clients
+                </option>
+
+                <option value="cli0001">
+                    Société Kouadio SARL
+                </option>
+
+                <option value="cli0002">
+                    Boutique Grâce Divine
+                </option>
+
+                <option value="cli0003">
+                    Yao Bernard
+                </option>
+
+                <option value="cli0004">
+                    Entreprise Koffi Services
+                </option>
+
+            </select>
+
+            <!-- Filtre période -->
+            <select id="invoice-period-filter">
+
+                <option value="">
+                    Toutes les périodes
+                </option>
+
+                <option value="aujourdhui">
+                    Aujourd'hui
+                </option>
+
+                <option value="semaine">
+                    Cette semaine
+                </option>
+
+                <option value="mois">
+                    Ce mois
+                </option>
+
+                <option value="trimestre">
+                    Ce trimestre
+                </option>
+
+                <option value="annee">
+                    Cette année
+                </option>
+
+            </select>
+
+            <!-- Filtre échéance -->
+            <select id="invoice-due-date-filter">
+
+                <option value="">
+                    Toutes les échéances
+                </option>
+
+                <option value="avenir">
+                    À venir
+                </option>
+
+                <option value="aujourdhui">
+                    Échéance aujourd'hui
+                </option>
+
+                <option value="depassee">
+                    Échéance dépassée
+                </option>
+
+                <option value="sans-echeance">
+                    Sans échéance
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- ===== Tableau des factures ===== -->
+        <div class="sales-table-container">
+
+            <table class="sales-table">
+
+                <thead>
+
+                    <tr>
+                        <th>ID Facture</th>
+                        <th>Date</th>
+                        <th>Client</th>
+                        <th>Commande</th>
+                        <th>Montant HT</th>
+                        <th>TVA</th>
+                        <th>Montant TTC</th>
+                        <th>Montant payé</th>
+                        <th>Reste à payer</th>
+                        <th>Échéance</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="invoices-table-body">
+
+                    <!-- ===== Exemple facture 1 ===== -->
+                    <tr>
+
+                        <td>#FAC0001</td>
+
+                        <td>20/07/2026</td>
+
+                        <td>Société Kouadio SARL</td>
+
+                        <td>#CMD0015</td>
+
+                        <td>381 356 FCFA</td>
+
+                        <td>68 644 FCFA</td>
+
+                        <td>450 000 FCFA</td>
+
+                        <td>450 000 FCFA</td>
+
+                        <td>0 FCFA</td>
+
+                        <td>20/07/2026</td>
+
+                        <td>
+                            <span class="status-badge status-paid">
+                                Payée
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button
+                                    class="action-btn view-btn"
+                                    title="Voir la facture"
+                                >
+                                    👁
+                                </button>
+
+                                <button
+                                    class="action-btn edit-btn"
+                                    title="Modifier la facture"
+                                >
+                                    ✏️
+                                </button>
+
+                                <button
+                                    class="action-btn print-btn"
+                                    title="Imprimer la facture"
+                                >
+                                    🖨️
+                                </button>
+
+                                <button
+                                    class="action-btn delete-btn"
+                                    title="Supprimer la facture"
+                                >
+                                    🗑️
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <!-- ===== Exemple facture 2 ===== -->
+                    <tr>
+
+                        <td>#FAC0002</td>
+
+                        <td>18/07/2026</td>
+
+                        <td>Boutique Grâce Divine</td>
+
+                        <td>#CMD0016</td>
+
+                        <td>254 237 FCFA</td>
+
+                        <td>45 763 FCFA</td>
+
+                        <td>300 000 FCFA</td>
+
+                        <td>150 000 FCFA</td>
+
+                        <td>150 000 FCFA</td>
+
+                        <td>25/07/2026</td>
+
+                        <td>
+                            <span class="status-badge status-pending">
+                                Partiellement payée
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button
+                                    class="action-btn view-btn"
+                                    title="Voir la facture"
+                                >
+                                    👁
+                                </button>
+
+                                <button
+                                    class="action-btn edit-btn"
+                                    title="Modifier la facture"
+                                >
+                                    ✏️
+                                </button>
+
+                                <button
+                                    class="action-btn print-btn"
+                                    title="Imprimer la facture"
+                                >
+                                    🖨️
+                                </button>
+
+                                <button
+                                    class="action-btn delete-btn"
+                                    title="Supprimer la facture"
+                                >
+                                    🗑️
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <!-- ===== Exemple facture 3 ===== -->
+                    <tr>
+
+                        <td>#FAC0003</td>
+
+                        <td>10/07/2026</td>
+
+                        <td>Yao Bernard</td>
+
+                        <td>#CMD0011</td>
+
+                        <td>203 390 FCFA</td>
+
+                        <td>36 610 FCFA</td>
+
+                        <td>240 000 FCFA</td>
+
+                        <td>0 FCFA</td>
+
+                        <td>240 000 FCFA</td>
+
+                        <td>17/07/2026</td>
+
+                        <td>
+                            <span class="status-badge status-cancelled">
+                                En retard
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button
+                                    class="action-btn view-btn"
+                                    title="Voir la facture"
+                                >
+                                    👁
+                                </button>
+
+                                <button
+                                    class="action-btn edit-btn"
+                                    title="Modifier la facture"
+                                >
+                                    ✏️
+                                </button>
+
+                                <button
+                                    class="action-btn print-btn"
+                                    title="Imprimer la facture"
+                                >
+                                    🖨️
+                                </button>
+
+                                <button
+                                    class="action-btn delete-btn"
+                                    title="Supprimer la facture"
+                                >
+                                    🗑️
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
