@@ -34,12 +34,12 @@ if (profileBtn) {
     profileBtn.addEventListener("click", (e) => {
         e.stopPropagation();
 
-        // Sur mobile, fermer la recherche avant d'ouvrir le profil
-        if (window.innerWidth <= 768) {
-            searchContainer.classList.remove("active");
-        }
+        // Sur mobile, fermer la recherche si elle existe
+if (window.innerWidth <= 768 && searchContainer) {
+    searchContainer.classList.remove("active");
+}
 
-        profileMenu.classList.toggle("active");
+profileMenu.classList.toggle("active");
     });
 
     // Fermer le menu en cliquant ailleurs
@@ -183,11 +183,11 @@ if (mobileSearchBtn && searchContainer) {
         e.stopPropagation();
 
         // Sur mobile, fermer le menu profil avant d'ouvrir la recherche
-        if (window.innerWidth <= 768) {
-            profileMenu.classList.remove("active");
-        }
+if (window.innerWidth <= 768 && profileMenu) {
+    profileMenu.classList.remove("active");
+}
 
-        searchContainer.classList.toggle("active");
+searchContainer.classList.toggle("active");
 
     });
 
