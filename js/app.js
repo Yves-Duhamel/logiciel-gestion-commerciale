@@ -1,5 +1,3 @@
-alert("app.js chargé");
-
 // ===== SIDEBAR TOGGLE =====
 
 const sidebar = document.getElementById("sidebar");
