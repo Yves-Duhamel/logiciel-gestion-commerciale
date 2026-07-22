@@ -256,290 +256,1301 @@
         <!-- ===== Contenu de la page ===== -->
         <section class="content">
 
-            <div class="welcome-section">
+    <!-- ===== Présentation du module ===== -->
+    <div class="welcome-section">
 
-                <h2>Clients</h2>
+        <div>
+            <h2>Gestion des clients</h2>
 
-                <p>
-                    Enregistrez, consultez et gérez tous les clients
-                    de votre boutique.
-                </p>
+            <p>
+                Enregistrez, consultez et gérez l’ensemble des clients
+                de votre entreprise.
+            </p>
+        </div>
+
+        <button class="btn-primary" id="new-client-btn">
+            ➕ Nouveau client
+        </button>
+
+    </div>
+
+
+    <!-- ===== KPI Clients ===== -->
+    <div class="kpi-grid clients-kpi-grid">
+
+        <article class="kpi-card">
+
+            <div class="kpi-card-header">
+                <span class="kpi-icon">👥</span>
+                <span class="kpi-title">Total clients</span>
+            </div>
+
+            <h3 class="kpi-value" id="total-clients-value">
+                1 245
+            </h3>
+
+            <p class="kpi-trend up">
+                ↑ +12 % ce mois
+            </p>
+
+        </article>
+
+
+        <article class="kpi-card">
+
+            <div class="kpi-card-header">
+                <span class="kpi-icon">✅</span>
+                <span class="kpi-title">Clients actifs</span>
+            </div>
+
+            <h3 class="kpi-value" id="active-clients-value">
+                1 180
+            </h3>
+
+            <p class="kpi-description">
+                94,8 % du portefeuille
+            </p>
+
+        </article>
+
+
+        <article class="kpi-card">
+
+            <div class="kpi-card-header">
+                <span class="kpi-icon">🆕</span>
+                <span class="kpi-title">Nouveaux ce mois</span>
+            </div>
+
+            <h3 class="kpi-value" id="new-clients-value">
+                48
+            </h3>
+
+            <p class="kpi-trend up">
+                ↑ +8 % par rapport au mois passé
+            </p>
+
+        </article>
+
+
+        <article class="kpi-card">
+
+            <div class="kpi-card-header">
+                <span class="kpi-icon">💰</span>
+                <span class="kpi-title">Achats cumulés</span>
+            </div>
+
+            <h3 class="kpi-value" id="client-revenue-value">
+                52 000 000 FCFA
+            </h3>
+
+            <p class="kpi-trend up">
+                ↑ +15 % ce trimestre
+            </p>
+
+        </article>
+
+    </div>
+
+
+    <!-- ===== Barre d’actions ===== -->
+    <div class="clients-toolbar">
+
+        <div class="toolbar-left">
+
+            <button class="btn-primary" id="new-client-toolbar-btn">
+                ➕ Nouveau client
+            </button>
+
+            <button class="btn-secondary" id="import-clients-btn">
+                📥 Importer
+            </button>
+
+            <button class="btn-secondary" id="export-clients-btn">
+                📤 Exporter
+            </button>
+
+            <button class="btn-secondary" id="print-clients-btn">
+                🖨️ Imprimer
+            </button>
+
+            <button class="btn-secondary" id="refresh-clients-btn">
+                🔄 Actualiser
+            </button>
+
+        </div>
+
+        <div class="toolbar-right">
+
+            <span class="client-count">
+                <strong id="filtered-client-count">2</strong>
+                client(s) affiché(s)
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===== Recherche et filtres ===== -->
+    <div class="clients-filters">
+
+        <div class="clients-search">
+
+            <span class="search-icon">🔍</span>
+
+            <input
+                type="text"
+                id="clients-search-input"
+                placeholder="Rechercher par nom, téléphone, email ou identifiant..."
+            >
+
+        </div>
+
+
+        <select id="client-type-filter">
+
+            <option value="">
+                Tous les types
+            </option>
+
+            <option value="particulier">
+                Particulier
+            </option>
+
+            <option value="entreprise">
+                Entreprise
+            </option>
+
+            <option value="revendeur">
+                Revendeur
+            </option>
+
+            <option value="client-comptoir">
+                Client comptoir
+            </option>
+
+        </select>
+
+
+        <select id="client-status-filter">
+
+            <option value="">
+                Tous les statuts
+            </option>
+
+            <option value="actif">
+                Actif
+            </option>
+
+            <option value="prospect">
+                Prospect
+            </option>
+
+            <option value="inactif">
+                Inactif
+            </option>
+
+            <option value="bloque">
+                Bloqué
+            </option>
+
+        </select>
+
+
+        <select id="client-commune-filter">
+
+            <option value="">
+                Toutes les communes
+            </option>
+
+            <option value="abobo">
+                Abobo
+            </option>
+
+            <option value="adjame">
+                Adjamé
+            </option>
+
+            <option value="attecoube">
+                Attécoubé
+            </option>
+
+            <option value="cocody">
+                Cocody
+            </option>
+
+            <option value="koumassi">
+                Koumassi
+            </option>
+
+            <option value="marcory">
+                Marcory
+            </option>
+
+            <option value="plateau">
+                Plateau
+            </option>
+
+            <option value="port-bouet">
+                Port-Bouët
+            </option>
+
+            <option value="treichville">
+                Treichville
+            </option>
+
+            <option value="yopougon">
+                Yopougon
+            </option>
+
+            <option value="autre">
+                Autre
+            </option>
+
+        </select>
+
+
+        <button class="btn-filter-reset" id="reset-client-filters">
+            Effacer les filtres
+        </button>
+
+    </div>
+
+
+    <!-- ===== Tableau des clients ===== -->
+    <div class="clients-table-container">
+
+        <div class="table-responsive">
+
+            <table class="clients-table">
+
+                <thead>
+
+                    <tr>
+                        <th>
+                            <input
+                                type="checkbox"
+                                id="select-all-clients"
+                                aria-label="Sélectionner tous les clients"
+                            >
+                        </th>
+
+                        <th>Client</th>
+                        <th>Contact</th>
+                        <th>Commune</th>
+                        <th>Type</th>
+                        <th>Dernier achat</th>
+                        <th>Commandes</th>
+                        <th>Total achats</th>
+                        <th>Solde</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="clients-table-body">
+
+                    <!-- ===== Client 1 ===== -->
+                    <tr
+                        data-name="awa traore"
+                        data-type="particulier"
+                        data-status="actif"
+                        data-commune="cocody"
+                    >
+
+                        <td>
+                            <input
+                                type="checkbox"
+                                class="client-checkbox"
+                                aria-label="Sélectionner Awa Traoré"
+                            >
+                        </td>
+
+                        <td>
+
+                            <div class="client-identity">
+
+                                <div class="client-avatar">
+                                    AT
+                                </div>
+
+                                <div class="client-name-block">
+
+                                    <strong>Awa Traoré</strong>
+
+                                    <span>#CL0001</span>
+
+                                    <div class="client-tags">
+                                        <span class="client-tag vip">
+                                            VIP
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+
+                            <div class="client-contact">
+
+                                <span>
+                                    📞 07 00 00 00 01
+                                </span>
+
+                                <span>
+                                    ✉️ awa.traore@email.com
+                                </span>
+
+                            </div>
+
+                        </td>
+
+                        <td>Cocody</td>
+
+                        <td>
+                            <span class="type-badge">
+                                Particulier
+                            </span>
+                        </td>
+
+                        <td>
+                            18 juillet 2026
+                        </td>
+
+                        <td>
+                            5
+                        </td>
+
+                        <td>
+                            275 000 FCFA
+                        </td>
+
+                        <td>
+                            <span class="balance-positive">
+                                0 FCFA
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="status-badge status-active">
+                                ● Actif
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button
+                                    class="action-btn view-btn"
+                                    title="Voir la fiche client"
+                                    data-client-id="CL0001"
+                                >
+                                    👁
+                                </button>
+
+                                <button
+                                    class="action-btn whatsapp-btn"
+                                    title="Contacter sur WhatsApp"
+                                    data-phone="2250700000001"
+                                >
+                                    💬
+                                </button>
+
+                                <button
+                                    class="action-btn edit-btn"
+                                    title="Modifier le client"
+                                    data-client-id="CL0001"
+                                >
+                                    ✏️
+                                </button>
+
+                                <button
+                                    class="action-btn delete-btn"
+                                    title="Supprimer le client"
+                                    data-client-id="CL0001"
+                                >
+                                    🗑️
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- ===== Client 2 ===== -->
+                    <tr
+                        data-name="entreprise kds"
+                        data-type="entreprise"
+                        data-status="actif"
+                        data-commune="marcory"
+                    >
+
+                        <td>
+                            <input
+                                type="checkbox"
+                                class="client-checkbox"
+                                aria-label="Sélectionner Entreprise KDS"
+                            >
+                        </td>
+
+                        <td>
+
+                            <div class="client-identity">
+
+                                <div class="client-avatar company-avatar">
+                                    KD
+                                </div>
+
+                                <div class="client-name-block">
+
+                                    <strong>Entreprise KDS</strong>
+
+                                    <span>#CL0002</span>
+
+                                    <div class="client-tags">
+
+                                        <span class="client-tag company">
+                                            Entreprise
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+
+                            <div class="client-contact">
+
+                                <span>
+                                    📞 05 00 00 00 02
+                                </span>
+
+                                <span>
+                                    ✉️ contact@kds.ci
+                                </span>
+
+                            </div>
+
+                        </td>
+
+                        <td>Marcory</td>
+
+                        <td>
+                            <span class="type-badge">
+                                Entreprise
+                            </span>
+                        </td>
+
+                        <td>
+                            20 juillet 2026
+                        </td>
+
+                        <td>
+                            12
+                        </td>
+
+                        <td>
+                            1 450 000 FCFA
+                        </td>
+
+                        <td>
+                            <span class="balance-negative">
+                                150 000 FCFA
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="status-badge status-active">
+                                ● Actif
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button
+                                    class="action-btn view-btn"
+                                    title="Voir la fiche client"
+                                    data-client-id="CL0002"
+                                >
+                                    👁
+                                </button>
+
+                                <button
+                                    class="action-btn whatsapp-btn"
+                                    title="Contacter sur WhatsApp"
+                                    data-phone="2250500000002"
+                                >
+                                    💬
+                                </button>
+
+                                <button
+                                    class="action-btn edit-btn"
+                                    title="Modifier le client"
+                                    data-client-id="CL0002"
+                                >
+                                    ✏️
+                                </button>
+
+                                <button
+                                    class="action-btn delete-btn"
+                                    title="Supprimer le client"
+                                    data-client-id="CL0002"
+                                >
+                                    🗑️
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- ===== État vide ===== -->
+        <div class="empty-state" id="clients-empty-state" hidden>
+
+            <div class="empty-state-icon">
+                👥
+            </div>
+
+            <h3>Aucun client trouvé</h3>
+
+            <p>
+                Aucun client ne correspond à votre recherche ou à vos filtres.
+            </p>
+
+            <button class="btn-primary" id="empty-new-client-btn">
+                Ajouter un client
+            </button>
+
+        </div>
+
+
+        <!-- ===== Pagination ===== -->
+        <div class="table-pagination">
+
+            <div class="pagination-info">
+
+                <span>Afficher</span>
+
+                <select id="clients-per-page">
+
+                    <option value="10">
+                        10
+                    </option>
+
+                    <option value="25">
+                        25
+                    </option>
+
+                    <option value="50">
+                        50
+                    </option>
+
+                    <option value="100">
+                        100
+                    </option>
+
+                </select>
+
+                <span>éléments par page</span>
 
             </div>
 
-            <!-- ===== Bouton nouveau client ===== -->
-            <div class="sales-toolbar">
 
-                <button class="btn-primary" id="new-client-btn">
-                    ➕ Nouveau client
+            <div class="pagination-controls">
+
+                <button
+                    class="pagination-btn"
+                    id="previous-page-btn"
+                    disabled
+                >
+                    ‹
+                </button>
+
+                <button class="pagination-btn active">
+                    1
+                </button>
+
+                <button class="pagination-btn">
+                    2
+                </button>
+
+                <button class="pagination-btn">
+                    3
+                </button>
+
+                <button
+                    class="pagination-btn"
+                    id="next-page-btn"
+                >
+                    ›
                 </button>
 
             </div>
 
-            <!-- ===== Recherche et filtres ===== -->
-            <div class="sales-filters">
+        </div>
 
-                <div class="sales-search">
+    </div>
 
-                    <input
-                        type="text"
-                        id="clients-search-input"
-                        placeholder="Rechercher par nom, téléphone ou email..."
-                    >
+
+    <!-- ===== Fenêtre Nouveau client ===== -->
+    <div class="modal-overlay" id="client-modal" aria-hidden="true">
+
+        <div
+            class="modal client-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="client-modal-title"
+        >
+
+            <div class="modal-header">
+
+                <div>
+
+                    <h2 id="client-modal-title">
+                        Nouveau client
+                    </h2>
+
+                    <p>
+                        Renseignez les informations du client.
+                    </p>
 
                 </div>
 
-                <!-- Filtre type de client -->
-                <select id="client-type-filter">
-
-                    <option value="">
-                        Tous les types de clients
-                    </option>
-
-                    <option value="particulier">
-                        Particulier
-                    </option>
-
-                    <option value="entreprise">
-                        Entreprise
-                    </option>
-
-                    <option value="revendeur">
-                        Revendeur
-                    </option>
-
-                    <option value="client-comptoir">
-                        Client comptoir
-                    </option>
-
-                </select>
-
-                <!-- Filtre statut -->
-                <select id="client-status-filter">
-
-                    <option value="">
-                        Tous les statuts
-                    </option>
-
-                    <option value="actif">
-                        Actif
-                    </option>
-
-                    <option value="inactif">
-                        Inactif
-                    </option>
-
-                    <option value="bloque">
-                        Bloqué
-                    </option>
-
-                </select>
-
-                <!-- Filtre commune -->
-                <select id="client-commune-filter">
-
-                    <option value="">
-                        Toutes les communes
-                    </option>
-
-                    <option value="abobo">
-                        Abobo
-                    </option>
-
-                    <option value="adjame">
-                        Adjamé
-                    </option>
-
-                    <option value="attecoube">
-                        Attécoubé
-                    </option>
-
-                    <option value="cocody">
-                        Cocody
-                    </option>
-
-                    <option value="koumassi">
-                        Koumassi
-                    </option>
-
-                    <option value="marcory">
-                        Marcory
-                    </option>
-
-                    <option value="plateau">
-                        Plateau
-                    </option>
-
-                    <option value="port-bouet">
-                        Port-Bouët
-                    </option>
-
-                    <option value="treichville">
-                        Treichville
-                    </option>
-
-                    <option value="yopougon">
-                        Yopougon
-                    </option>
-
-                    <option value="autre">
-                        Autre
-                    </option>
-
-                </select>
+                <button
+                    class="modal-close"
+                    id="close-client-modal"
+                    aria-label="Fermer la fenêtre"
+                >
+                    ✕
+                </button>
 
             </div>
 
-            <!-- ===== Tableau des clients ===== -->
-            <div class="sales-table-container">
 
-                <table class="sales-table">
+            <form id="client-form">
 
-                    <thead>
+                <div class="modal-body">
 
-                        <tr>
-                            <th>ID Client</th>
-                            <th>Nom complet</th>
-                            <th>Téléphone</th>
-                            <th>Commune</th>
-                            <th>Type de client</th>
-                            <th>Commandes</th>
-                            <th>Total des achats</th>
-                            <th>Statut</th>
-                            <th>Actions</th>
-                        </tr>
+                    <!-- ===== Informations générales ===== -->
+                    <section class="form-section">
 
-                    </thead>
+                        <div class="form-section-header">
 
-                    <tbody id="clients-table-body">
+                            <span class="form-section-icon">
+                                👤
+                            </span>
 
-                        <!-- Exemple de client 1 -->
-                        <tr>
+                            <div>
+                                <h3>Informations générales</h3>
+                                <p>Identité et catégorie du client</p>
+                            </div>
 
-                            <td>#CL0001</td>
+                        </div>
 
-                            <td>Awa Traoré</td>
 
-                            <td>07 00 00 00 01</td>
+                        <div class="form-grid">
 
-                            <td>Cocody</td>
+                            <div class="form-group">
 
-                            <td>
-                                Particulier
-                            </td>
+                                <label for="client-type">
+                                    Type de client
+                                    <span class="required">*</span>
+                                </label>
 
-                            <td>
-                                5
-                            </td>
+                                <select id="client-type" required>
 
-                            <td>
-                                275 000 FCFA
-                            </td>
+                                    <option value="">
+                                        Sélectionner un type
+                                    </option>
 
-                            <td>
-                                <span class="status-badge status-paid">
-                                    Actif
-                                </span>
-                            </td>
+                                    <option value="particulier">
+                                        Particulier
+                                    </option>
 
-                            <td>
+                                    <option value="entreprise">
+                                        Entreprise
+                                    </option>
 
-                                <div class="table-actions">
+                                    <option value="revendeur">
+                                        Revendeur
+                                    </option>
 
-                                    <button
-                                        class="action-btn view-btn"
-                                        title="Voir le client"
-                                    >
-                                        👁
-                                    </button>
+                                    <option value="client-comptoir">
+                                        Client comptoir
+                                    </option>
 
-                                    <button
-                                        class="action-btn edit-btn"
-                                        title="Modifier le client"
-                                    >
-                                        ✏️
-                                    </button>
+                                </select>
 
-                                    <button
-                                        class="action-btn delete-btn"
-                                        title="Supprimer le client"
-                                    >
-                                        🗑️
-                                    </button>
+                            </div>
 
-                                </div>
 
-                            </td>
+                            <div class="form-group">
 
-                        </tr>
+                                <label for="client-status">
+                                    Statut
+                                </label>
 
-                        <!-- Exemple de client 2 -->
-                        <tr>
+                                <select id="client-status">
 
-                            <td>#CL0002</td>
+                                    <option value="actif">
+                                        Actif
+                                    </option>
 
-                            <td>Entreprise KDS</td>
+                                    <option value="prospect">
+                                        Prospect
+                                    </option>
 
-                            <td>05 00 00 00 02</td>
+                                    <option value="inactif">
+                                        Inactif
+                                    </option>
 
-                            <td>Marcory</td>
+                                    <option value="bloque">
+                                        Bloqué
+                                    </option>
 
-                            <td>
-                                Entreprise
-                            </td>
+                                </select>
 
-                            <td>
-                                12
-                            </td>
+                            </div>
 
-                            <td>
-                                1 450 000 FCFA
-                            </td>
 
-                            <td>
-                                <span class="status-badge status-paid">
-                                    Actif
-                                </span>
-                            </td>
+                            <div class="form-group">
 
-                            <td>
+                                <label for="client-firstname">
+                                    Prénom
+                                </label>
 
-                                <div class="table-actions">
+                                <input
+                                    type="text"
+                                    id="client-firstname"
+                                    placeholder="Exemple : Awa"
+                                >
 
-                                    <button
-                                        class="action-btn view-btn"
-                                        title="Voir le client"
-                                    >
-                                        👁
-                                    </button>
+                            </div>
 
-                                    <button
-                                        class="action-btn edit-btn"
-                                        title="Modifier le client"
-                                    >
-                                        ✏️
-                                    </button>
 
-                                    <button
-                                        class="action-btn delete-btn"
-                                        title="Supprimer le client"
-                                    >
-                                        🗑️
-                                    </button>
+                            <div class="form-group">
 
-                                </div>
+                                <label for="client-lastname">
+                                    Nom
+                                    <span class="required">*</span>
+                                </label>
 
-                            </td>
+                                <input
+                                    type="text"
+                                    id="client-lastname"
+                                    placeholder="Exemple : Traoré"
+                                    required
+                                >
 
-                        </tr>
+                            </div>
 
-                    </tbody>
 
-                </table>
+                            <div class="form-group form-group-full">
 
-            </div>
+                                <label for="client-company">
+                                    Entreprise ou raison sociale
+                                </label>
 
-        </section>
+                                <input
+                                    type="text"
+                                    id="client-company"
+                                    placeholder="Nom de l’entreprise"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ===== Coordonnées ===== -->
+                    <section class="form-section">
+
+                        <div class="form-section-header">
+
+                            <span class="form-section-icon">
+                                📞
+                            </span>
+
+                            <div>
+                                <h3>Coordonnées</h3>
+                                <p>Informations de contact du client</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="client-phone">
+                                    Téléphone principal
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="client-phone"
+                                    placeholder="07 00 00 00 00"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="client-secondary-phone">
+                                    Téléphone secondaire
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="client-secondary-phone"
+                                    placeholder="05 00 00 00 00"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="client-email">
+                                    Adresse email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="client-email"
+                                    placeholder="client@email.com"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="client-whatsapp">
+                                    Numéro WhatsApp
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="client-whatsapp"
+                                    placeholder="07 00 00 00 00"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ===== Adresse ===== -->
+                    <section class="form-section">
+
+                        <div class="form-section-header">
+
+                            <span class="form-section-icon">
+                                📍
+                            </span>
+
+                            <div>
+                                <h3>Adresse</h3>
+                                <p>Localisation et adresse du client</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="client-country">
+                                    Pays
+                                </label>
+
+                                <select id="client-country">
+
+                                    <option value="cote-divoire">
+                                        Côte d’Ivoire
+                                    </option>
+
+                                    <option value="autre">
+                                        Autre
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="client-city">
+                                    Ville
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="client-city"
+                                    value="Abidjan"
+                                    placeholder="Ville"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="client-commune">
+                                    Commune
+                                </label>
+
+                                <select id="client-commune">
+
+                                    <option value="">
+                                        Sélectionner une commune
+                                    </option>
+
+                                    <option value="abobo">
+                                        Abobo
+                                    </option>
+
+                                    <option value="adjame">
+                                        Adjamé
+                                    </option>
+
+                                    <option value="attecoube">
+                                        Attécoubé
+                                    </option>
+
+                                    <option value="cocody">
+                                        Cocody
+                                    </option>
+
+                                    <option value="koumassi">
+                                        Koumassi
+                                    </option>
+
+                                    <option value="marcory">
+                                        Marcory
+                                    </option>
+
+                                    <option value="plateau">
+                                        Plateau
+                                    </option>
+
+                                    <option value="port-bouet">
+                                        Port-Bouët
+                                    </option>
+
+                                    <option value="treichville">
+                                        Treichville
+                                    </option>
+
+                                    <option value="yopougon">
+                                        Yopougon
+                                    </option>
+
+                                    <option value="autre">
+                                        Autre
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="client-neighborhood">
+                                    Quartier
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="client-neighborhood"
+                                    placeholder="Exemple : Riviera Anono"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group form-group-full">
+
+                                <label for="client-address">
+                                    Adresse détaillée
+                                </label>
+
+                                <textarea
+                                    id="client-address"
+                                    rows="3"
+                                    placeholder="Rue, bâtiment, repère ou indications supplémentaires"
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ===== Informations commerciales ===== -->
+                    <section class="form-section">
+
+                        <div class="form-section-header">
+
+                            <span class="form-section-icon">
+                                💼
+                            </span>
+
+                            <div>
+                                <h3>Informations commerciales</h3>
+                                <p>Conditions de vente et suivi client</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="client-credit-limit">
+                                    Plafond de crédit
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="client-credit-limit"
+                                    min="0"
+                                    value="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="client-payment-delay">
+                                    Délai de paiement
+                                </label>
+
+                                <select id="client-payment-delay">
+
+                                    <option value="comptant">
+                                        Paiement comptant
+                                    </option>
+
+                                    <option value="7">
+                                        7 jours
+                                    </option>
+
+                                    <option value="15">
+                                        15 jours
+                                    </option>
+
+                                    <option value="30">
+                                        30 jours
+                                    </option>
+
+                                    <option value="45">
+                                        45 jours
+                                    </option>
+
+                                    <option value="60">
+                                        60 jours
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="client-source">
+                                    Source du client
+                                </label>
+
+                                <select id="client-source">
+
+                                    <option value="">
+                                        Sélectionner une source
+                                    </option>
+
+                                    <option value="facebook">
+                                        Facebook
+                                    </option>
+
+                                    <option value="linkedin">
+                                        LinkedIn
+                                    </option>
+
+                                    <option value="whatsapp">
+                                        WhatsApp
+                                    </option>
+
+                                    <option value="recommandation">
+                                        Recommandation
+                                    </option>
+
+                                    <option value="passage-boutique">
+                                        Passage en boutique
+                                    </option>
+
+                                    <option value="commercial">
+                                        Prospection commerciale
+                                    </option>
+
+                                    <option value="autre">
+                                        Autre
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="client-commercial">
+                                    Commercial responsable
+                                </label>
+
+                                <select id="client-commercial">
+
+                                    <option value="">
+                                        Aucun commercial
+                                    </option>
+
+                                    <option value="commercial-1">
+                                        Commercial 1
+                                    </option>
+
+                                    <option value="commercial-2">
+                                        Commercial 2
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group form-group-full">
+
+                                <label for="client-tags">
+                                    Tags
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="client-tags"
+                                    placeholder="Exemple : VIP, Revendeur, Entreprise"
+                                >
+
+                                <small>
+                                    Séparez les tags par une virgule.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ===== Notes ===== -->
+                    <section class="form-section">
+
+                        <div class="form-section-header">
+
+                            <span class="form-section-icon">
+                                📝
+                            </span>
+
+                            <div>
+                                <h3>Notes</h3>
+                                <p>Informations complémentaires</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="client-notes">
+                                Notes internes
+                            </label>
+
+                            <textarea
+                                id="client-notes"
+                                rows="4"
+                                placeholder="Ajoutez des informations utiles concernant ce client..."
+                            ></textarea>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn-secondary"
+                        id="cancel-client-btn"
+                    >
+                        Annuler
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn-primary"
+                        id="save-client-btn"
+                    >
+                        Enregistrer le client
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
 
     </main>
 
