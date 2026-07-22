@@ -228,6 +228,90 @@ function afficherGraphiqueRevenus() {
 
 
 // ========================================
+// GRAPHIQUE DE RÉPARTITION DES VENTES
+// ========================================
+
+function afficherGraphiqueVentes() {
+    const canvas = document.getElementById("ventes-chart");
+
+    if (!canvas) {
+        console.error("Canvas ventes-chart introuvable");
+        return;
+    }
+
+    if (typeof Chart === "undefined") {
+        console.error("La bibliothèque Chart.js n'est pas chargée");
+        return;
+    }
+
+    new Chart(canvas, {
+        type: "doughnut",
+
+        data: {
+            labels: [
+                "Électronique",
+                "Accessoires",
+                "Équipements",
+                "Autres"
+            ],
+
+            datasets: [
+                {
+                    label: "Nombre de ventes",
+                    data: [
+                        145,
+                        90,
+                        60,
+                        33
+                    ],
+                    borderWidth: 2
+                }
+            ]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: "65%",
+
+            plugins: {
+                legend: {
+                    display: true,
+                    position: "bottom",
+
+                    labels: {
+                        usePointStyle: true,
+                        padding: 15
+                    }
+                },
+
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            const valeur = context.raw;
+
+                            const total = context.dataset.data.reduce(
+                                function (somme, nombre) {
+                                    return somme + nombre;
+                                },
+                                0
+                            );
+
+                            const pourcentage = (
+                                (valeur / total) * 100
+                            ).toFixed(1);
+
+                            return `${context.label} : ${valeur} ventes (${pourcentage} %)`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+
+// ========================================
 // INITIALISATION DU DASHBOARD
 // ========================================
 
@@ -237,6 +321,7 @@ function initialiserDashboard() {
     afficherKPIPrincipaux();
     afficherKPISecondaires();
     afficherGraphiqueRevenus();
+    afficherGraphiqueVentes();
 }
 
 
@@ -244,4 +329,7 @@ function initialiserDashboard() {
 // DÉMARRAGE
 // ========================================
 
-document.addEventListener("DOMContentLoaded", initialiserDashboard);
+document.addEventListener(
+    "DOMContentLoaded",
+    initialiserDashboard
+);
