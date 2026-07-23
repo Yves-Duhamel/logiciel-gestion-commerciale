@@ -1,0 +1,380 @@
+/* ==========================================================
+   PAGE APPROVISIONNEMENTS
+   Styles spécifiques à approvisionnements.html
+========================================================== */
+
+:root {
+    --supply-primary: #2563eb;
+    --supply-primary-dark: #1d4ed8;
+    --supply-primary-soft: #eff6ff;
+    --supply-success: #16a34a;
+    --supply-success-soft: #f0fdf4;
+    --supply-warning: #d97706;
+    --supply-warning-soft: #fffbeb;
+    --supply-danger: #dc2626;
+    --supply-danger-soft: #fef2f2;
+    --supply-info: #0891b2;
+    --supply-info-soft: #ecfeff;
+    --supply-border: #e5e7eb;
+    --supply-text: #111827;
+    --supply-muted: #6b7280;
+    --supply-surface: #ffffff;
+    --supply-radius: 16px;
+    --supply-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.welcome-section {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 30px;
+    margin-bottom: 24px;
+    border: 1px solid #dbeafe;
+    border-radius: var(--supply-radius);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.10), rgba(8, 145, 178, 0.04)), var(--supply-surface);
+    box-shadow: var(--supply-shadow);
+}
+
+.welcome-section::after {
+    content: "📦";
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    font-size: 72px;
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+.welcome-section h2 {
+    margin: 0 0 8px;
+    color: var(--supply-text);
+    font-size: clamp(1.45rem, 2vw, 2rem);
+    font-weight: 750;
+    letter-spacing: -0.02em;
+}
+
+.welcome-section p {
+    max-width: 720px;
+    margin: 0;
+    color: var(--supply-muted);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.sales-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+#new-supply-btn {
+    min-height: 44px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--supply-primary), var(--supply-primary-dark));
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+#new-supply-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.28);
+    filter: brightness(1.03);
+}
+
+.sales-filters {
+    display: grid;
+    grid-template-columns: minmax(260px, 1.7fr) repeat(4, minmax(160px, 1fr));
+    gap: 12px;
+    padding: 18px;
+    margin-bottom: 22px;
+    border: 1px solid var(--supply-border);
+    border-radius: var(--supply-radius);
+    background: var(--supply-surface);
+    box-shadow: var(--supply-shadow);
+}
+
+.sales-search {
+    position: relative;
+}
+
+.sales-search::before {
+    content: "🔎";
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.sales-search input,
+.sales-filters select {
+    width: 100%;
+    min-height: 44px;
+    border: 1px solid var(--supply-border);
+    border-radius: 11px;
+    background: #fff;
+    color: var(--supply-text);
+    font: inherit;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.sales-search input {
+    padding: 0 14px 0 42px;
+}
+
+.sales-filters select {
+    padding: 0 36px 0 12px;
+    cursor: pointer;
+}
+
+.sales-search input:focus,
+.sales-filters select:focus {
+    border-color: var(--supply-primary);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+.sales-table-container {
+    overflow-x: auto;
+    border: 1px solid var(--supply-border);
+    border-radius: var(--supply-radius);
+    background: var(--supply-surface);
+    box-shadow: var(--supply-shadow);
+}
+
+.sales-table {
+    width: 100%;
+    min-width: 1180px;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: var(--supply-text);
+}
+
+.sales-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.sales-table th {
+    padding: 15px 16px;
+    border-bottom: 1px solid #dbe3ee;
+    background: #f8fafc;
+    color: #475569;
+    font-size: .78rem;
+    font-weight: 750;
+    letter-spacing: .035em;
+    text-align: left;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.sales-table td {
+    padding: 16px;
+    border-bottom: 1px solid #eef2f7;
+    color: #334155;
+    font-size: .92rem;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.sales-table tbody tr {
+    transition: background-color .18s ease;
+}
+
+.sales-table tbody tr:hover {
+    background: #f8fbff;
+}
+
+.sales-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.sales-table td:first-child {
+    color: var(--supply-primary);
+    font-weight: 750;
+}
+
+.sales-table td:nth-child(7) {
+    color: var(--supply-text);
+    font-weight: 700;
+}
+
+.sales-table th:last-child,
+.sales-table td:last-child {
+    text-align: center;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 92px;
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: 750;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.status-paid {
+    border-color: #bbf7d0;
+    background: var(--supply-success-soft);
+    color: var(--supply-success);
+}
+
+.status-delivery {
+    border-color: #a5f3fc;
+    background: var(--supply-info-soft);
+    color: var(--supply-info);
+}
+
+.status-pending {
+    border-color: #fde68a;
+    background: var(--supply-warning-soft);
+    color: var(--supply-warning);
+}
+
+.status-draft {
+    border-color: #e5e7eb;
+    background: #f8fafc;
+    color: #64748b;
+}
+
+.status-partial {
+    border-color: #fed7aa;
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+.status-cancelled {
+    border-color: #fecaca;
+    background: var(--supply-danger-soft);
+    color: var(--supply-danger);
+}
+
+.table-actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.action-btn {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid var(--supply-border);
+    border-radius: 9px;
+    background: #fff;
+    cursor: pointer;
+    transition: transform .18s ease, border-color .18s ease, background-color .18s ease, box-shadow .18s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.10);
+}
+
+.view-btn:hover {
+    border-color: #93c5fd;
+    background: var(--supply-primary-soft);
+}
+
+.edit-btn:hover {
+    border-color: #fde68a;
+    background: var(--supply-warning-soft);
+}
+
+.delete-btn:hover {
+    border-color: #fecaca;
+    background: var(--supply-danger-soft);
+}
+
+@media (max-width: 1280px) {
+    .sales-filters {
+        grid-template-columns: minmax(260px, 2fr) repeat(2, minmax(170px, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .welcome-section {
+        padding: 24px;
+    }
+
+    .sales-filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sales-search {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .welcome-section {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .welcome-section::after {
+        display: none;
+    }
+
+    .sales-toolbar {
+        justify-content: stretch;
+    }
+
+    #new-supply-btn {
+        width: 100%;
+    }
+
+    .sales-filters {
+        grid-template-columns: 1fr;
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .sales-search {
+        grid-column: auto;
+    }
+
+    .sales-table-container {
+        border-radius: 14px;
+    }
+
+    .sales-table th,
+    .sales-table td {
+        padding: 13px 14px;
+    }
+}
+
+@media print {
+    .sales-toolbar,
+    .sales-filters,
+    .table-actions {
+        display: none !important;
+    }
+
+    .welcome-section,
+    .sales-table-container {
+        border: 1px solid #d1d5db;
+        box-shadow: none;
+    }
+
+    .sales-table {
+        min-width: 0;
+    }
+}
