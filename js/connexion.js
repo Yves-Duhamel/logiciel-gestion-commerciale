@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    if (redirectAuthenticatedUser()) {
+        return;
+    }
+    
     const loginForm = document.getElementById("login-form");
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
