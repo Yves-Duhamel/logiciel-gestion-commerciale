@@ -1,253 +1,147 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("login-form");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const passwordToggle = document.getElementById("password-toggle");
+    const passwordToggleIcon = document.getElementById("password-toggle-icon");
+    const loginButton = document.getElementById("login-button");
+    const alertMessage = document.getElementById("alert-message");
+    const alertText = document.getElementById("alert-text");
+    const alertIcon = document.getElementById("alert-icon");
+    const forgotPasswordLink = document.getElementById("forgot-password-link");
 
-            const loginForm =
-                document.getElementById("login-form");
+    passwordToggle.addEventListener("click", function () {
+        const passwordIsHidden = passwordInput.type === "password";
 
-            const identifierInput =
-                document.getElementById("identifier");
+        passwordInput.type = passwordIsHidden ? "text" : "password";
 
-            const passwordInput =
-                document.getElementById("password");
+        passwordToggleIcon.className = passwordIsHidden
+            ? "fa-regular fa-eye-slash"
+            : "fa-regular fa-eye";
 
-            const passwordToggle =
-                document.getElementById("password-toggle");
+        passwordToggle.setAttribute(
+            "aria-label",
+            passwordIsHidden
+                ? "Masquer le mot de passe"
+                : "Afficher le mot de passe"
+        );
 
-            const passwordToggleIcon =
-                document.getElementById("password-toggle-icon");
+        passwordToggle.setAttribute(
+            "title",
+            passwordIsHidden
+                ? "Masquer le mot de passe"
+                : "Afficher le mot de passe"
+        );
+    });
 
-            const loginButton =
-                document.getElementById("login-button");
+    emailInput.addEventListener("input", function () {
+        emailInput.classList.remove("input-error");
+        hideAlert();
+    });
 
-            const alertMessage =
-                document.getElementById("alert-message");
+    passwordInput.addEventListener("input", function () {
+        passwordInput.classList.remove("input-error");
+        hideAlert();
+    });
 
-            const alertText =
-                document.getElementById("alert-text");
+    loginForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-            const alertIcon =
-                document.getElementById("alert-icon");
+        const email = emailInput.value.trim();
+        const motDePasse = passwordInput.value.trim();
 
-            const forgotPasswordLink =
-                document.getElementById("forgot-password-link");
+        emailInput.classList.remove("input-error");
+        passwordInput.classList.remove("input-error");
+        hideAlert();
 
+        let formIsValid = true;
 
-            /*
-            =========================================
-            AFFICHER OU MASQUER LE MOT DE PASSE
-            =========================================
-            */
+        if (email === "") {
+            emailInput.classList.add("input-error");
+            formIsValid = false;
+        }
 
-            passwordToggle.addEventListener("click", function () {
+        if (motDePasse === "") {
+            passwordInput.classList.add("input-error");
+            formIsValid = false;
+        }
 
-                const passwordIsHidden =
-                    passwordInput.type === "password";
+        if (!formIsValid) {
+            showAlert(
+                "Veuillez renseigner votre adresse e-mail et votre mot de passe.",
+                "error"
+            );
+            return;
+        }
 
-                passwordInput.type =
-                    passwordIsHidden ? "text" : "password";
+        setLoadingState(true);
 
-                passwordToggleIcon.className =
-                    passwordIsHidden
-                        ? "fa-regular fa-eye-slash"
-                        : "fa-regular fa-eye";
+        try {
+            const result = await apiPost("login", {
+                email: email,
+                motDePasse: motDePasse
+            });
 
-                passwordToggle.setAttribute(
-                    "aria-label",
-                    passwordIsHidden
-                        ? "Masquer le mot de passe"
-                        : "Afficher le mot de passe"
+            if (!result.success) {
+                showAlert(
+                    result.message || "Adresse e-mail ou mot de passe incorrect.",
+                    "error"
                 );
+                return;
+            }
 
-                passwordToggle.setAttribute(
-                    "title",
-                    passwordIsHidden
-                        ? "Masquer le mot de passe"
-                        : "Afficher le mot de passe"
-                );
-
-            });
-
-
-            /*
-            =========================================
-            RETIRER LES ERREURS PENDANT LA SAISIE
-            =========================================
-            */
-
-            identifierInput.addEventListener("input", function () {
-
-                identifierInput.classList.remove("input-error");
-
-                hideAlert();
-
-            });
-
-            passwordInput.addEventListener("input", function () {
-
-                passwordInput.classList.remove("input-error");
-
-                hideAlert();
-
-            });
-
-
-            /*
-            =========================================
-            SOUMISSION DU FORMULAIRE
-            =========================================
-            */
-
-            loginForm.addEventListener("submit", function (event) {
-
-                event.preventDefault();
-
-                const identifier =
-                    identifierInput.value.trim();
-
-                const password =
-                    passwordInput.value.trim();
-
-                let formIsValid = true;
-
-
-                identifierInput.classList.remove("input-error");
-                passwordInput.classList.remove("input-error");
-
-                hideAlert();
-
-
-                if (identifier === "") {
-
-                    identifierInput.classList.add("input-error");
-
-                    formIsValid = false;
-
-                }
-
-
-                if (password === "") {
-
-                    passwordInput.classList.add("input-error");
-
-                    formIsValid = false;
-
-                }
-
-
-                if (!formIsValid) {
-
-                    showAlert(
-                        "Veuillez renseigner votre identifiant et votre mot de passe.",
-                        "error"
-                    );
-
-                    return;
-
-                }
-
-
-                setLoadingState(true);
-
-
-                /*
-                =========================================
-                FUTURE CONNEXION À GOOGLE APPS SCRIPT
-                =========================================
-
-                Ici, nous ajouterons plus tard l'appel à
-                Google Apps Script pour vérifier les
-                identifiants dans Google Sheets.
-
-                Exemple futur :
-
-                fetch(API_URL, {
-                    method: "POST",
-                    body: JSON.stringify({
-                        action: "login",
-                        identifier: identifier,
-                        password: password
-                    })
-                });
-
-                Pour le moment, aucune connexion réelle
-                n'est effectuée.
-                */
-
-
-                setTimeout(function () {
-
-                    setLoadingState(false);
-
-                    showAlert(
-                        "La page de connexion est prête. L'authentification sera activée lors de la connexion à Google Sheets.",
-                        "success"
-                    );
-
-                }, 900);
-
-            });
-
-
-            /*
-            =========================================
-            MOT DE PASSE OUBLIÉ
-            =========================================
-            */
-
-            forgotPasswordLink.addEventListener(
-                "click",
-                function (event) {
-
-                    event.preventDefault();
-
-                    showAlert(
-                        "La récupération du mot de passe sera activée avec le système d'authentification.",
-                        "success"
-                    );
-
-                }
+            localStorage.setItem(
+                "visibl_user",
+                JSON.stringify(result.user)
             );
 
+            showAlert(
+                result.message || "Connexion réussie.",
+                "success"
+            );
 
-            /*
-            =========================================
-            FONCTIONS UTILITAIRES
-            =========================================
-            */
+            setTimeout(function () {
+                window.location.href = "dashboard.html";
+            }, 700);
 
-            function setLoadingState(isLoading) {
+        } catch (error) {
+            console.error("Erreur de connexion :", error);
 
-                loginButton.disabled = isLoading;
+            showAlert(
+                "Impossible de joindre le serveur. Veuillez réessayer.",
+                "error"
+            );
 
-                loginButton.classList.toggle(
-                    "loading",
-                    isLoading
-                );
+        } finally {
+            setLoadingState(false);
+        }
+    });
 
-            }
+    forgotPasswordLink.addEventListener("click", function (event) {
+        event.preventDefault();
 
+        showAlert(
+            "La récupération du mot de passe sera ajoutée prochainement.",
+            "success"
+        );
+    });
 
-            function showAlert(message, type) {
+    function setLoadingState(isLoading) {
+        loginButton.disabled = isLoading;
+        loginButton.classList.toggle("loading", isLoading);
+    }
 
-                alertText.textContent = message;
+    function showAlert(message, type) {
+        alertText.textContent = message;
+        alertMessage.className = "alert-message show " + type;
 
-                alertMessage.className =
-                    "alert-message show " + type;
+        alertIcon.className = type === "success"
+            ? "fa-solid fa-circle-check"
+            : "fa-solid fa-circle-exclamation";
+    }
 
-                alertIcon.className =
-                    type === "success"
-                        ? "fa-solid fa-circle-check"
-                        : "fa-solid fa-circle-exclamation";
-
-            }
-
-
-            function hideAlert() {
-
-                alertMessage.className =
-                    "alert-message";
-
-                alertText.textContent = "";
-
-            }
-
-        });
+    function hideAlert() {
+        alertMessage.className = "alert-message";
+        alertText.textContent = "";
+    }
+});
