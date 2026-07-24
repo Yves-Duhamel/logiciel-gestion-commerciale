@@ -322,15 +322,69 @@ function initialiserDashboard() {
 
     const utilisateurConnecte = getCurrentUser();
 
-    console.log(
-        "Utilisateur connecté :",
-        utilisateurConnecte
-    );
+    afficherInformationsUtilisateur(utilisateurConnecte);
+    initialiserDeconnexion();
 
     afficherKPIPrincipaux();
     afficherKPISecondaires();
     afficherGraphiqueRevenus();
     afficherGraphiqueVentes();
+}
+
+// ========================================
+// INFORMATIONS DE L'UTILISATEUR
+// ========================================
+
+function afficherInformationsUtilisateur(utilisateur) {
+    const userNameElement =
+        document.getElementById("user-name");
+
+    const userRoleElement =
+        document.getElementById("user-role");
+
+    if (!utilisateur) {
+        return;
+    }
+
+    const nomComplet =
+        utilisateur.nomComplet ||
+        utilisateur.nom ||
+        utilisateur.email ||
+        "Utilisateur";
+
+    const role =
+        utilisateur.role ||
+        "Utilisateur";
+
+    if (userNameElement) {
+        userNameElement.textContent = nomComplet;
+    }
+
+    if (userRoleElement) {
+        userRoleElement.textContent = role;
+    }
+}
+
+
+// ========================================
+// DÉCONNEXION
+// ========================================
+
+function initialiserDeconnexion() {
+    const logoutButton =
+        document.getElementById("logout-button");
+
+    if (!logoutButton) {
+        return;
+    }
+
+    logoutButton.addEventListener(
+        "click",
+        function (event) {
+            event.preventDefault();
+            logoutUser();
+        }
+    );
 }
 
 
